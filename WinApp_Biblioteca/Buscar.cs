@@ -12,9 +12,62 @@ namespace WinApp_Biblioteca
 {
     public partial class Buscar : Form
     {
-        public Buscar()
+        private readonly DataGridView dgwTodoLibros;
+        public Buscar(DataGridView dgwLibros)
         {
             InitializeComponent();
+
+            this.dgwTodoLibros = dgwLibros;
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombreLibro = txtBusqueda.Text.Trim();
+
+            if (!string.IsNullOrEmpty(nombreLibro))
+            {
+                BuscarLibro(nombreLibro);
+            }
+            else
+            {
+                MessageBox.Show("Por favor, ingrese el nombre del libro para buscar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void BuscarLibro(string nombreLibro)
+        {
+            DataTable dtResultados = new DataTable();
+            dtResultados.Columns.Add("Código");
+            dtResultados.Columns.Add("Nombre");
+            dtResultados.Columns.Add("Autor");
+            dtResultados.Columns.Add("Editorial");
+            dtResultados.Columns.Add("Edición");
+
+            foreach (DataGridViewRow row in dgwTodoLibros.Rows)
+            {
+                string nombre = Convert.ToString(row.Cells["Nombre"].Value);
+                if (nombre.IndexOf(nombreLibro, StringComparison.OrdinalIgnoreCase) != -1)
+                {
+                    dtResultados.Rows.Add(
+                        row.Cells["Código"].Value,
+                        row.Cells["Nombre"].Value,
+                        row.Cells["Autor"].Value,
+                        row.Cells["Editorial"].Value,
+                        row.Cells["Edición"].Value
+                    );
+                }
+            }
+
+            if (dtResultados.Rows.Count > 0)
+            {
+                DgwBuscar.DataSource = dtResultados;
+            }
+            else
+            {
+                MessageBox.Show("No se encontraron resultados para el nombre del libro proporcionado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DgwBuscar.DataSource = null;
+            }
         }
     }
 }
