@@ -69,6 +69,11 @@ namespace WinApp_Biblioteca
             Btn_Ingresar_Click(sender, e);
         }
 
+        private void LkL_Rsgt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
         private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(e.KeyChar == (char)Keys.Enter)

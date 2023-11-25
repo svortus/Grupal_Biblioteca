@@ -122,6 +122,7 @@
             this.LkL_Rsgt.TabIndex = 7;
             this.LkL_Rsgt.TabStop = true;
             this.LkL_Rsgt.Text = "Registrate aquí";
+            this.LkL_Rsgt.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LkL_Rsgt_LinkClicked);
             // 
             // Cbx_Mc
             // 
