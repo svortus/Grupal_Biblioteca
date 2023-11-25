@@ -1,6 +1,6 @@
 ﻿namespace WinApp_Biblioteca
 {
-    partial class Frm_libros
+    partial class Frm_editar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Dgw2 = new System.Windows.Forms.DataGridView();
+            this.Editar = new System.Windows.Forms.GroupBox();
+            this.Dgw_Editar = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgw2)).BeginInit();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.Editar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar)).BeginInit();
             this.SuspendLayout();
             // 
-            // Dgw2
+            // Editar
             // 
-            this.Dgw2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgw2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Editar.Controls.Add(this.btnEditar);
+            this.Editar.Controls.Add(this.label1);
+            this.Editar.Controls.Add(this.Dgw_Editar);
+            this.Editar.Location = new System.Drawing.Point(12, 12);
+            this.Editar.Name = "Editar";
+            this.Editar.Size = new System.Drawing.Size(776, 426);
+            this.Editar.TabIndex = 0;
+            this.Editar.TabStop = false;
+            this.Editar.Text = "grpEditar";
+            // 
+            // Dgw_Editar
+            // 
+            this.Dgw_Editar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgw_Editar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Nombre,
             this.Autor,
             this.Edición,
             this.Editorial});
-            this.Dgw2.Location = new System.Drawing.Point(49, 159);
-            this.Dgw2.Name = "Dgw2";
-            this.Dgw2.RowHeadersWidth = 51;
-            this.Dgw2.RowTemplate.Height = 24;
-            this.Dgw2.Size = new System.Drawing.Size(718, 206);
-            this.Dgw2.TabIndex = 24;
-            this.Dgw2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgw2_CellContentClick);
+            this.Dgw_Editar.Location = new System.Drawing.Point(31, 53);
+            this.Dgw_Editar.Name = "Dgw_Editar";
+            this.Dgw_Editar.RowHeadersWidth = 51;
+            this.Dgw_Editar.RowTemplate.Height = 24;
+            this.Dgw_Editar.Size = new System.Drawing.Size(718, 206);
+            this.Dgw_Editar.TabIndex = 25;
             // 
             // Código
             // 
@@ -93,36 +107,46 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cascadia Mono", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(133, 54);
+            this.label1.Location = new System.Drawing.Point(261, 294);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(521, 40);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Todos los Libros Disponibles";
+            this.label1.Size = new System.Drawing.Size(225, 16);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "* Por favor, selecione el libro a editar";
             // 
-            // Frm_libros
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(345, 365);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 27;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // Frm_editar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Dgw2);
-            this.Name = "Frm_libros";
-            this.Text = "Todos los libros ";
-            ((System.ComponentModel.ISupportInitialize)(this.Dgw2)).EndInit();
+            this.Controls.Add(this.Editar);
+            this.Name = "Frm_editar";
+            this.Text = "Frm_editar";
+            this.Editar.ResumeLayout(false);
+            this.Editar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView Dgw2;
+        private System.Windows.Forms.GroupBox Editar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView Dgw_Editar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edición;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

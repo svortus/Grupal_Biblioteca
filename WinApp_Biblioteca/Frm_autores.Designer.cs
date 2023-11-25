@@ -32,6 +32,7 @@
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.Código,
             this.Nombre,
             this.Autor});
-            this.Dgw3.Location = new System.Drawing.Point(43, 58);
+            this.Dgw3.Location = new System.Drawing.Point(36, 128);
             this.Dgw3.Name = "Dgw3";
             this.Dgw3.RowHeadersWidth = 51;
             this.Dgw3.RowTemplate.Height = 24;
@@ -70,16 +71,28 @@
             this.Autor.Name = "Autor";
             this.Autor.Width = 125;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cascadia Mono", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(215, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(359, 40);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Autores y sus obras";
+            // 
             // Frm_autores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Dgw3);
             this.Name = "Frm_autores";
-            this.Text = "Frm_autores";
+            this.Text = "Autores y obras";
             ((System.ComponentModel.ISupportInitialize)(this.Dgw3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -89,5 +102,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.Label label1;
     }
 }

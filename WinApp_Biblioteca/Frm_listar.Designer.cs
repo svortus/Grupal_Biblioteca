@@ -38,26 +38,29 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cascadia Mono", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(232, 34);
+            this.label2.Location = new System.Drawing.Point(348, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(380, 44);
+            this.label2.Size = new System.Drawing.Size(152, 44);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Listas para usuario";
+            this.label2.Text = "Listas ";
             // 
             // Btn_listaUltimosInsertados
             // 
-            this.Btn_listaUltimosInsertados.Location = new System.Drawing.Point(472, 142);
+            this.Btn_listaUltimosInsertados.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_listaUltimosInsertados.Location = new System.Drawing.Point(534, 242);
             this.Btn_listaUltimosInsertados.Name = "Btn_listaUltimosInsertados";
-            this.Btn_listaUltimosInsertados.Size = new System.Drawing.Size(108, 50);
+            this.Btn_listaUltimosInsertados.Size = new System.Drawing.Size(139, 61);
             this.Btn_listaUltimosInsertados.TabIndex = 27;
             this.Btn_listaUltimosInsertados.Text = "Ultimos Agregados";
             this.Btn_listaUltimosInsertados.UseVisualStyleBackColor = true;
+            this.Btn_listaUltimosInsertados.Click += new System.EventHandler(this.Btn_listaUltimosInsertados_Click_1);
             // 
             // Btn_listaAutores
             // 
-            this.Btn_listaAutores.Location = new System.Drawing.Point(292, 142);
+            this.Btn_listaAutores.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_listaAutores.Location = new System.Drawing.Point(356, 242);
             this.Btn_listaAutores.Name = "Btn_listaAutores";
-            this.Btn_listaAutores.Size = new System.Drawing.Size(108, 50);
+            this.Btn_listaAutores.Size = new System.Drawing.Size(139, 61);
             this.Btn_listaAutores.TabIndex = 25;
             this.Btn_listaAutores.Text = "Autores";
             this.Btn_listaAutores.UseVisualStyleBackColor = true;
@@ -65,12 +68,14 @@
             // 
             // Btn_listaTotalLibros
             // 
-            this.Btn_listaTotalLibros.Location = new System.Drawing.Point(106, 142);
+            this.Btn_listaTotalLibros.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_listaTotalLibros.Location = new System.Drawing.Point(160, 242);
             this.Btn_listaTotalLibros.Name = "Btn_listaTotalLibros";
-            this.Btn_listaTotalLibros.Size = new System.Drawing.Size(108, 50);
+            this.Btn_listaTotalLibros.Size = new System.Drawing.Size(139, 61);
             this.Btn_listaTotalLibros.TabIndex = 24;
             this.Btn_listaTotalLibros.Text = "Todos los libros";
             this.Btn_listaTotalLibros.UseVisualStyleBackColor = true;
+            this.Btn_listaTotalLibros.Click += new System.EventHandler(this.Btn_listaTotalLibros_Click_1);
             // 
             // Frm_listar
             // 
@@ -82,7 +87,7 @@
             this.Controls.Add(this.Btn_listaTotalLibros);
             this.Controls.Add(this.label2);
             this.Name = "Frm_listar";
-            this.Text = "Frm_listar";
+            this.Text = "Listado";
             this.ResumeLayout(false);
             this.PerformLayout();
 

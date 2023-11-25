@@ -58,6 +58,18 @@
     <Compile Include="Frm_autores.Designer.cs">
       <DependentUpon>Frm_autores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_editar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_editar.Designer.cs">
+      <DependentUpon>Frm_editar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_editar_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_editar_2.Designer.cs">
+      <DependentUpon>Frm_editar_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_libros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_autores.resx">
       <DependentUpon>Frm_autores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_editar.resx">
+      <DependentUpon>Frm_editar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_editar_2.resx">
+      <DependentUpon>Frm_editar_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_libros.resx">
       <DependentUpon>Frm_libros.cs</DependentUpon>
