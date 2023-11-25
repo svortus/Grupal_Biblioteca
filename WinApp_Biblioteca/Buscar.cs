@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,7 @@ namespace WinApp_Biblioteca
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string nombreLibro = txtBusqueda.Text.Trim();
+            string nombreLibro = Limpiatexto(txtBusqueda.Text).ToLowerInvariant();
 
             if (!string.IsNullOrEmpty(nombreLibro))
             {
@@ -47,6 +48,7 @@ namespace WinApp_Biblioteca
             foreach (DataGridViewRow row in dgwTodoLibros.Rows)
             {
                 string nombre = Convert.ToString(row.Cells["Nombre"].Value);
+                string nombreNormalizado = Limpiatexto(nombre);
                 if (nombre.IndexOf(nombreLibro, StringComparison.OrdinalIgnoreCase) != -1)
                 {
                     dtResultados.Rows.Add(
@@ -68,6 +70,20 @@ namespace WinApp_Biblioteca
                 MessageBox.Show("No se encontraron resultados para el nombre del libro proporcionado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 DgwBuscar.DataSource = null;
             }
+        }
+
+        private string Limpiatexto(string texto)
+        {
+            string eliminarT = texto.Normalize(NormalizationForm.FormD);
+            StringBuilder sb = new StringBuilder();
+
+            foreach (char c in eliminarT)
+            {
+                if (CharUnicodeInfo.GetUnicodeCategory(c) != UnicodeCategory.NonSpacingMark)
+                    sb.Append(c);
+            }
+
+            return sb.ToString().ToLowerInvariant();
         }
     }
 }
