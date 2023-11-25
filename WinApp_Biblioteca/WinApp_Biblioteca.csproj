@@ -58,6 +58,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_autores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_autores.Designer.cs">
+      <DependentUpon>Frm_autores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_libros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_libros.Designer.cs">
+      <DependentUpon>Frm_libros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_listar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_listar.Designer.cs">
+      <DependentUpon>Frm_listar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_ultimosLibros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ultimosLibros.Designer.cs">
+      <DependentUpon>Frm_ultimosLibros.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Buscar.resx">
@@ -65,6 +89,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_autores.resx">
+      <DependentUpon>Frm_autores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_libros.resx">
+      <DependentUpon>Frm_libros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_listar.resx">
+      <DependentUpon>Frm_listar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ultimosLibros.resx">
+      <DependentUpon>Frm_ultimosLibros.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
