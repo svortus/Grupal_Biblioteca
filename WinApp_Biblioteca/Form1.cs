@@ -17,7 +17,8 @@ namespace WinApp_Biblioteca
         {
             InitializeComponent();
         }
-        string usuario, clave;
+        string usuario, clave,usc,clc;
+
 
         private void Txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -54,7 +55,7 @@ namespace WinApp_Biblioteca
             if(usuario =="Master" &&  clave == "1234")
             {
 
-            }else if ()
+            }else if (usuario==usc && clave==clc)
             {
 
             }
