@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Editar = new System.Windows.Forms.GroupBox();
+            this.grpEditar = new System.Windows.Forms.GroupBox();
             this.Dgw_Editar = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,21 +37,21 @@
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.Editar.SuspendLayout();
+            this.grpEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar)).BeginInit();
             this.SuspendLayout();
             // 
-            // Editar
+            // grpEditar
             // 
-            this.Editar.Controls.Add(this.btnEditar);
-            this.Editar.Controls.Add(this.label1);
-            this.Editar.Controls.Add(this.Dgw_Editar);
-            this.Editar.Location = new System.Drawing.Point(12, 12);
-            this.Editar.Name = "Editar";
-            this.Editar.Size = new System.Drawing.Size(776, 426);
-            this.Editar.TabIndex = 0;
-            this.Editar.TabStop = false;
-            this.Editar.Text = "grpEditar";
+            this.grpEditar.Controls.Add(this.btnEditar);
+            this.grpEditar.Controls.Add(this.label1);
+            this.grpEditar.Controls.Add(this.Dgw_Editar);
+            this.grpEditar.Location = new System.Drawing.Point(12, 12);
+            this.grpEditar.Name = "grpEditar";
+            this.grpEditar.Size = new System.Drawing.Size(776, 426);
+            this.grpEditar.TabIndex = 0;
+            this.grpEditar.TabStop = false;
+            this.grpEditar.Text = "Editar";
             // 
             // Dgw_Editar
             // 
@@ -127,11 +127,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Editar);
+            this.Controls.Add(this.grpEditar);
             this.Name = "Frm_editar";
             this.Text = "Frm_editar";
-            this.Editar.ResumeLayout(false);
-            this.Editar.PerformLayout();
+            this.grpEditar.ResumeLayout(false);
+            this.grpEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar)).EndInit();
             this.ResumeLayout(false);
 
@@ -139,7 +139,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox Editar;
+        private System.Windows.Forms.GroupBox grpEditar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView Dgw_Editar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
