@@ -35,5 +35,10 @@ namespace WinApp_Biblioteca
                 }
             }
         }
+
+        private void Dgw4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
