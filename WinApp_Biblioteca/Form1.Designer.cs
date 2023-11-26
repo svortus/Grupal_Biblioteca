@@ -140,6 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(814, 579);
             this.Controls.Add(this.Cbx_Mc);
             this.Controls.Add(this.LkL_Rsgt);
@@ -152,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Log in";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

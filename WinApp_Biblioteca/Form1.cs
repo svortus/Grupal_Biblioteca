@@ -13,11 +13,15 @@ namespace WinApp_Biblioteca
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        string usuario, clave, usc, clc;
+        public Form1(string us, string cl)
         {
             InitializeComponent();
+            this.usc = us;
+            this.clc = cl;
         }
-        string usuario, clave;
+        
+
 
         private void Txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -53,10 +57,12 @@ namespace WinApp_Biblioteca
         {
             if(usuario =="Master" &&  clave == "1234")
             {
-
-            }else if ()
+                Frm_Menu objFM = new Frm_Menu(null);
+                objFM.ShowDialog();
+            }else if (usuario==usc && clave==clc)
             {
-
+                Frm_Menu objFM = new Frm_Menu(null);
+                objFM.ShowDialog();
             }
             else
             {
@@ -64,14 +70,25 @@ namespace WinApp_Biblioteca
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Txt_Usuario.Focus();
+        }
+
         private void Btn_Ingresar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Btn_Ingresar_Click(sender, e);
+            if ((e.KeyChar == (char)Keys.Enter))
+            {
+                Btn_Ingresar_Click(sender, e);
+            }
+            
         }
 
         private void LkL_Rsgt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Frm_Registrar objFR = new Frm_Registrar(usc, clc);
+            objFR.Show();
+            
         }
 
         private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)

@@ -32,6 +32,7 @@
             this.Btn_listaUltimosInsertados = new System.Windows.Forms.Button();
             this.Btn_listaAutores = new System.Windows.Forms.Button();
             this.Btn_listaTotalLibros = new System.Windows.Forms.Button();
+            this.Btn_ListaPersonalizada = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -77,17 +78,29 @@
             this.Btn_listaTotalLibros.UseVisualStyleBackColor = true;
             this.Btn_listaTotalLibros.Click += new System.EventHandler(this.Btn_listaTotalLibros_Click_1);
             // 
+            // Btn_ListaPersonalizada
+            // 
+            this.Btn_ListaPersonalizada.Location = new System.Drawing.Point(244, 365);
+            this.Btn_ListaPersonalizada.Name = "Btn_ListaPersonalizada";
+            this.Btn_ListaPersonalizada.Size = new System.Drawing.Size(108, 50);
+            this.Btn_ListaPersonalizada.TabIndex = 28;
+            this.Btn_ListaPersonalizada.Text = "Lista Personalizada";
+            this.Btn_ListaPersonalizada.UseVisualStyleBackColor = true;
+            this.Btn_ListaPersonalizada.Click += new System.EventHandler(this.Btn_ListaPersonalizada_Click);
+            // 
             // Frm_listar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(886, 486);
+            this.Controls.Add(this.Btn_ListaPersonalizada);
             this.Controls.Add(this.Btn_listaUltimosInsertados);
             this.Controls.Add(this.Btn_listaAutores);
             this.Controls.Add(this.Btn_listaTotalLibros);
             this.Controls.Add(this.label2);
             this.Name = "Frm_listar";
             this.Text = "Listado";
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +112,6 @@
         private System.Windows.Forms.Button Btn_listaUltimosInsertados;
         private System.Windows.Forms.Button Btn_listaAutores;
         private System.Windows.Forms.Button Btn_listaTotalLibros;
+        private System.Windows.Forms.Button Btn_ListaPersonalizada;
     }
 }
