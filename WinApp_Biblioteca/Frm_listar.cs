@@ -23,8 +23,8 @@ namespace WinApp_Biblioteca
         private void Btn_listaAutores_Click(object sender, EventArgs e)
         {
             
-            Frm_autores todos_autores = new Frm_autores(Dgw1);
-            todos_autores.ShowDialog();
+            Frm_autores autores = new Frm_autores(Dgw1);
+            autores.ShowDialog();
         }
 
         private void Btn_listaTotalLibros_Click_1(object sender, EventArgs e)
