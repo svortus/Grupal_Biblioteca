@@ -92,33 +92,33 @@
             // ingresarToolStripMenuItem
             // 
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.ingresarToolStripMenuItem.Text = "Ingresar";
             this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.buscarToolStripMenuItem.Text = "Buscar";
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
@@ -132,7 +132,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cascadia Mono", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(235, 180);
+            this.label1.Location = new System.Drawing.Point(226, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(323, 44);
             this.label1.TabIndex = 1;
@@ -147,12 +147,13 @@
             this.Autor,
             this.Edición,
             this.Editorial});
-            this.Dgw1.Location = new System.Drawing.Point(53, 255);
+            this.Dgw1.Location = new System.Drawing.Point(47, 158);
             this.Dgw1.Name = "Dgw1";
             this.Dgw1.RowHeadersWidth = 51;
             this.Dgw1.RowTemplate.Height = 24;
-            this.Dgw1.Size = new System.Drawing.Size(718, 77);
+            this.Dgw1.Size = new System.Drawing.Size(718, 241);
             this.Dgw1.TabIndex = 27;
+            this.Dgw1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgw1_CellContentClick);
             // 
             // Código
             // 

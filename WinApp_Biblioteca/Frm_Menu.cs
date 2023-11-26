@@ -67,6 +67,10 @@ namespace WinApp_Biblioteca
             Frm_editar objeEditar = new Frm_editar();
             objeEditar.Show();
         }
+
+        private void Dgw1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
-}
-//puto el que lee
+}//puto el que lee

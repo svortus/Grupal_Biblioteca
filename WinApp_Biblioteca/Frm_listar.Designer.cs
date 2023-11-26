@@ -48,7 +48,7 @@
             // Btn_listaUltimosInsertados
             // 
             this.Btn_listaUltimosInsertados.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_listaUltimosInsertados.Location = new System.Drawing.Point(534, 242);
+            this.Btn_listaUltimosInsertados.Location = new System.Drawing.Point(541, 171);
             this.Btn_listaUltimosInsertados.Name = "Btn_listaUltimosInsertados";
             this.Btn_listaUltimosInsertados.Size = new System.Drawing.Size(139, 61);
             this.Btn_listaUltimosInsertados.TabIndex = 27;
@@ -59,7 +59,7 @@
             // Btn_listaAutores
             // 
             this.Btn_listaAutores.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_listaAutores.Location = new System.Drawing.Point(356, 242);
+            this.Btn_listaAutores.Location = new System.Drawing.Point(345, 171);
             this.Btn_listaAutores.Name = "Btn_listaAutores";
             this.Btn_listaAutores.Size = new System.Drawing.Size(139, 61);
             this.Btn_listaAutores.TabIndex = 25;
@@ -70,7 +70,7 @@
             // Btn_listaTotalLibros
             // 
             this.Btn_listaTotalLibros.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_listaTotalLibros.Location = new System.Drawing.Point(160, 242);
+            this.Btn_listaTotalLibros.Location = new System.Drawing.Point(153, 171);
             this.Btn_listaTotalLibros.Name = "Btn_listaTotalLibros";
             this.Btn_listaTotalLibros.Size = new System.Drawing.Size(139, 61);
             this.Btn_listaTotalLibros.TabIndex = 24;
@@ -80,7 +80,7 @@
             // 
             // Btn_ListaPersonalizada
             // 
-            this.Btn_ListaPersonalizada.Location = new System.Drawing.Point(244, 365);
+            this.Btn_ListaPersonalizada.Location = new System.Drawing.Point(356, 281);
             this.Btn_ListaPersonalizada.Name = "Btn_ListaPersonalizada";
             this.Btn_ListaPersonalizada.Size = new System.Drawing.Size(108, 50);
             this.Btn_ListaPersonalizada.TabIndex = 28;
@@ -100,7 +100,6 @@
             this.Controls.Add(this.label2);
             this.Name = "Frm_listar";
             this.Text = "Listado";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
