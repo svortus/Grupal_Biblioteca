@@ -26,7 +26,7 @@ namespace WinApp_Biblioteca
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_Agregar objFA = new Frm_Agregar(null);
+            Frm_Agregar objFA = new Frm_Agregar(n);
             objFA.Show();
         }
     }

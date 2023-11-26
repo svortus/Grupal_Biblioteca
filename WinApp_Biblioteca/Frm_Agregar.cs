@@ -121,6 +121,19 @@ namespace WinApp_Biblioteca
         {
             InitializeComponent();
             this.n = n;
+            if(n != null)
+            {
+                //work in progress
+                foreach (DataGridViewRow row in n.Rows)
+                {
+                    Dgw1.Rows.Add();
+                    Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
+                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
+                    Dgw1.Rows[row.Index].Cells["Autor"].Value = row.Cells[2].Value;
+                    Dgw1.Rows[row.Index].Cells["Edición"].Value = row.Cells[3].Value;
+                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
+                }
+            }
             
         }
 
