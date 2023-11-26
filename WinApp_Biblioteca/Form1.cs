@@ -57,12 +57,17 @@ namespace WinApp_Biblioteca
         {
             if(usuario == "Master" &&  clave == "1234")
             {
+                
                 Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
+                this.Visible = false;
+                
             }else if (usuario==usc && clave==clc)
             {
+                
                 Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
+                this.Visible = false;
             }
             else
             {

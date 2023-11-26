@@ -15,27 +15,23 @@ namespace WinApp_Biblioteca
         DataGridView n1;
         public Frm_Menu(DataGridView n)
         {
+            
             InitializeComponent();
             n1 = n;
             if (n != null)
             {
                 //work in progress
-                foreach (DataGridViewRow row in n.Rows)
+                foreach (DataGridViewRow fila in n.Rows)
                 {
-                    // Agregar nueva fila a Dgw5
-                    Dgw1.Rows.Add();
-                    int filas = Dgw1.Rows.Count - 1;
-                    Dgw1[0, filas - 1].Value = row.Cells[0].Value;
-                    Dgw1[1, filas - 1].Value = row.Cells[1].Value;
-                    Dgw1[2, filas - 1].Value = row.Cells[2].Value;
-                    Dgw1[3, filas - 1].Value = row.Cells[3].Value;
-                    Dgw1[4, filas - 1].Value = row.Cells[4].Value;
-                    Dgw1.Rows.Add();
-                    /*Dgw1.Rows[row.Index].Cells["Código"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Autor"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Edición"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = */
+                    // Agregar nueva fila a Dgw1
+                    int indice = Dgw1.Rows.Add();
+
+                    // Copiar datos de la fila del DataGridView de origen a Dgw5
+                    Dgw1.Rows[indice].Cells["Código"].Value = fila.Cells[0].Value;
+                    Dgw1.Rows[indice].Cells["Nombre"].Value = fila.Cells[1].Value;
+                    Dgw1.Rows[indice].Cells["Autor"].Value = fila.Cells[2].Value;
+                    Dgw1.Rows[indice].Cells["Editorial"].Value = fila.Cells[3].Value;
+                    Dgw1.Rows[indice].Cells["Edición"].Value = fila.Cells[4].Value;
                 }
             }
             
