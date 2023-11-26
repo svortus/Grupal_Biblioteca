@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace WinApp_Biblioteca
 {
     public partial class Frm_Agregar : Form
     {
-        string codigo, nombre, autor , editorial;
+        string codigo, nombre, autor, editorial;
         int edicion;
         DataGridView n;
         private void Txt_Nom_KeyPress(object sender, KeyPressEventArgs e)
@@ -55,7 +56,7 @@ namespace WinApp_Biblioteca
                 try
                 {
                     edicion = int.Parse(Txt_Edi.Text);
-                    if( edicion <= 0)
+                    if (edicion <= 0)
                     {
                         MessageBox.Show("No exiten ediciónes negativas  ");
                     }
@@ -63,11 +64,11 @@ namespace WinApp_Biblioteca
                     {
                         Txt_Edt.Focus();
                     }
-                    
+
                 }
                 catch
                 {
-                    MessageBox.Show("Ingrese enteros " );
+                    MessageBox.Show("Ingrese enteros ");
                 }
             }
         }
@@ -121,7 +122,7 @@ namespace WinApp_Biblioteca
         {
             InitializeComponent();
             this.n = n;
-            if(n != null)
+            if (n != null)
             {
                 //work in progress
                 foreach (DataGridViewRow row in n.Rows)
@@ -134,7 +135,7 @@ namespace WinApp_Biblioteca
                     Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
                 }
             }
-            
+
         }
 
         private void Frm_Agregar_Load(object sender, EventArgs e)
@@ -157,5 +158,51 @@ namespace WinApp_Biblioteca
                 }
             }
         }
+
+        //enviar informacion by jermin
+        public class Libro
+        {
+            public string Codigo { get; set; }
+            public string Nombre { get; set; }
+            public string Autor { get; set; }
+            public string Editorial { get; set; }
+            public int Edicion { get; set; }
+        }
+
+        public static class DatosCompartidos
+        {
+            public static Libro InformacionLibro { get; set; }
+        }
+
+        public class TuFormulario
+        {
+            // Método no estático
+            public void EnviarInformacion()
+            {
+                // Crear una instancia del formulario o usar la instancia existente
+                TuFormulario instanciaFormulario = new TuFormulario();
+
+                // Acceder a los TextBoxes a través de la instancia del formulario
+                DatosCompartidos.InformacionLibro = new Libro
+                {
+                    Codigo = instanciaFormulario.Txt_Cod.Text,
+                    Nombre = instanciaFormulario.Txt_Nom.Text,
+                    Autor = instanciaFormulario.Txt_Aut.Text,
+                    Editorial = instanciaFormulario.Txt_Edi.Text,
+                    Edicion = int.Parse(instanciaFormulario.Txt_Edt.Text)
+                };
+
+ 
+            }
+
+            // Declaración de los TextBoxes (asegúrate de que sean públicos o internos)
+            public TextBox Txt_Cod = new TextBox();
+            public TextBox Txt_Nom = new TextBox();
+            public TextBox Txt_Aut = new TextBox();
+            public TextBox Txt_Edi = new TextBox();
+            public TextBox Txt_Edt = new TextBox();
+        }
+
+
     }
 }

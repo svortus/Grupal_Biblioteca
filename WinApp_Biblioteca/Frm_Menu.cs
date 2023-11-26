@@ -35,5 +35,11 @@ namespace WinApp_Biblioteca
             Frm_listar objListados = new Frm_listar();
             objListados.Show();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_editar objeEditar = new Frm_editar();
+            objeEditar.Show();
+        }
     }
 }
