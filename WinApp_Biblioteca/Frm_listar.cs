@@ -13,6 +13,8 @@ namespace WinApp_Biblioteca
 {
     public partial class Frm_listar : Form
     {
+        DataGridView Dgw1;
+        //Temporal y borrable 
         public Frm_listar()
         {
             InitializeComponent();

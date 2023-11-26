@@ -54,7 +54,11 @@ namespace WinApp_Biblioteca
 
         private void Btn_Rsgt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Btn_Rsgt_Click(sender, e);
+            if((e.KeyChar == (char)Keys.Enter))
+            {
+                Btn_Rsgt_Click(sender, e);
+            }
+            
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -102,7 +106,7 @@ namespace WinApp_Biblioteca
                 try
                 {
                     usur = Txt_Usuario.Text;
-                    Txt_Clave2.Focus();
+                    Txt_Clave.Focus();
                 }
                 catch 
                 {

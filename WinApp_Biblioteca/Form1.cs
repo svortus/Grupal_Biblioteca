@@ -57,10 +57,12 @@ namespace WinApp_Biblioteca
         {
             if(usuario =="Master" &&  clave == "1234")
             {
-
+                Frm_Menu objFM = new Frm_Menu(null);
+                objFM.ShowDialog();
             }else if (usuario==usc && clave==clc)
             {
-
+                Frm_Menu objFM = new Frm_Menu(null);
+                objFM.ShowDialog();
             }
             else
             {
@@ -68,9 +70,18 @@ namespace WinApp_Biblioteca
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Txt_Usuario.Focus();
+        }
+
         private void Btn_Ingresar_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Btn_Ingresar_Click(sender, e);
+            if ((e.KeyChar == (char)Keys.Enter))
+            {
+                Btn_Ingresar_Click(sender, e);
+            }
+            
         }
 
         private void LkL_Rsgt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

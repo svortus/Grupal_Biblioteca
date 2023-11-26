@@ -61,13 +61,13 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(137, 26);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // productoToolStripMenuItem
@@ -79,7 +79,7 @@
             this.buscarToolStripMenuItem,
             this.listarToolStripMenuItem});
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
             this.productoToolStripMenuItem.Text = "Producto";
             // 
             // ingresarToolStripMenuItem
@@ -87,35 +87,36 @@
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
             this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ingresarToolStripMenuItem.Text = "Ingresar";
+            this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.buscarToolStripMenuItem.Text = "Buscar";
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.listarToolStripMenuItem.Text = "Listar";
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             // 
             // label1
@@ -124,7 +125,7 @@
             this.label1.Font = new System.Drawing.Font("Cascadia Mono", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(235, 180);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(340, 45);
+            this.label1.Size = new System.Drawing.Size(323, 44);
             this.label1.TabIndex = 1;
             this.label1.Text = "Librería Virtual";
             // 
@@ -138,6 +139,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Frm_Menu";
             this.Text = "Frm_Menu";
+            this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

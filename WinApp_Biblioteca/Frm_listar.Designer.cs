@@ -100,7 +100,7 @@
             this.Controls.Add(this.label2);
             this.Name = "Frm_listar";
             this.Text = "Listado";
-            this.Load += new System.EventHandler(this.Frm_listar_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

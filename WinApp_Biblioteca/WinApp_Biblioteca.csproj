@@ -117,6 +117,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Agregar.resx">
+      <DependentUpon>Frm_Agregar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_autores.resx">
       <DependentUpon>Frm_autores.cs</DependentUpon>
     </EmbeddedResource>

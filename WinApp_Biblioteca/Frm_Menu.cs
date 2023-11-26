@@ -12,9 +12,22 @@ namespace WinApp_Biblioteca
 {
     public partial class Frm_Menu : Form
     {
-        public Frm_Menu()
+        DataGridView n;
+        public Frm_Menu(DataGridView n)
         {
             InitializeComponent();
+            this.n = n;
+        }
+
+        private void Frm_Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_Agregar objFA = new Frm_Agregar(null);
+            objFA.Show();
         }
     }
 }
