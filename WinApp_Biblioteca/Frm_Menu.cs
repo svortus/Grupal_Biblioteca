@@ -29,5 +29,11 @@ namespace WinApp_Biblioteca
             Frm_Agregar objFA = new Frm_Agregar(n);
             objFA.Show();
         }
+
+        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Frm_listar objListados = new Frm_listar();
+            objListados.Show();
+        }
     }
 }

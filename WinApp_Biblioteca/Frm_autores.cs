@@ -14,14 +14,17 @@ namespace WinApp_Biblioteca
     {
         public Frm_autores(DataGridView NuevoDgw)
         {
-            InitializeComponent();
-
-            foreach (DataGridViewRow row in NuevoDgw.Rows)
+            if (NuevoDgw != null)
             {
-                Dgw3.Rows.Add();
-                Dgw3.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
-                Dgw3.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
-                Dgw3.Rows[row.Index].Cells["Autor"].Value = row.Cells[2].Value;
+                InitializeComponent();
+
+                foreach (DataGridViewRow row in NuevoDgw.Rows)
+                {
+                    Dgw3.Rows.Add();
+                    Dgw3.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
+                    Dgw3.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
+                    Dgw3.Rows[row.Index].Cells["Autor"].Value = row.Cells[2].Value;
+                }
             }
         }
 

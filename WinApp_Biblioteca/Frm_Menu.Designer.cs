@@ -61,7 +61,7 @@
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(86, 26);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -92,31 +92,32 @@
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buscarToolStripMenuItem.Text = "Buscar";
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listarToolStripMenuItem.Text = "Listar";
+            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(104, 26);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(104, 24);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             // 
             // label1
