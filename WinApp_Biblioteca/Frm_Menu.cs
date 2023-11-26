@@ -58,7 +58,7 @@ namespace WinApp_Biblioteca
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_listar objListados = new Frm_listar();
+            Frm_listar objListados = new Frm_listar(Dgw1);
             objListados.Show();
         }
 
