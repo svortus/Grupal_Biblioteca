@@ -50,6 +50,7 @@ namespace WinApp_Biblioteca
             {
                 MessageBox.Show("La clave no es igual");
             }
+
         }
 
         private void Btn_Rsgt_KeyPress(object sender, KeyPressEventArgs e)
