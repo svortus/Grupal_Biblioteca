@@ -109,7 +109,7 @@ namespace WinApp_Biblioteca
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
         {
             // Llenar el DataGridView en Frm_Editar_2 con los datos de la fila seleccionada
-            dgvMenu.Rows.Clear();
+            //dgvMenu.SelectedRows.cl
             try
             {
                 // Obtener los datos de los TextBoxes

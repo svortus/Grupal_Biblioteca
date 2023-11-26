@@ -35,7 +35,6 @@ namespace WinApp_Biblioteca
                     rowData[i] = row.Cells[i].Value;
                 }
                 Dgw_Editar.Rows.Add(rowData);
-                
             }
         }
 
@@ -60,7 +59,8 @@ namespace WinApp_Biblioteca
 
             // Abrir el formulario Frm_Editar_2 y pasarle los datos de la fila seleccionada
             Frm_editar_2 frmEditar_2 = new Frm_editar_2(rowData, dgvEditar);
-            
+            //Dgw_Editar.Rows.Clear();
+
             frmEditar_2.ShowDialog();
         }
     }
