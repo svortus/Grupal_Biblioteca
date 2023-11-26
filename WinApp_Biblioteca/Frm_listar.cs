@@ -14,15 +14,16 @@ namespace WinApp_Biblioteca
     public partial class Frm_listar : Form
     {
         DataGridView Dgw1;
-        //Temporal y borrable 
-        public Frm_listar()
+
+        // Modificado para recibir el DataGridView como parámetro
+        public Frm_listar(DataGridView dgv)
         {
             InitializeComponent();
+            this.Dgw1 = dgv;
         }
 
         private void Btn_listaAutores_Click(object sender, EventArgs e)
         {
-            
             Frm_autores autores = new Frm_autores(Dgw1);
             autores.ShowDialog();
         }
