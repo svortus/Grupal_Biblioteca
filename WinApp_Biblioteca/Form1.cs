@@ -60,14 +60,15 @@ namespace WinApp_Biblioteca
                 
                 Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
-                Close();
+                this.Visible = false;
+                
                 
             }else if (usuario==usc && clave==clc)
             {
                 
                 Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();//c
-                Close();
+                this.Visible = false;
             }
             else
             {
