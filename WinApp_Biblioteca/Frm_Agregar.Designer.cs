@@ -227,6 +227,7 @@
             this.Btn_Salir.TabIndex = 39;
             this.Btn_Salir.Text = "Guardar y Salir";
             this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
             // 
             // Frm_Agregar
             // 

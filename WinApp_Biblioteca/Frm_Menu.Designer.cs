@@ -39,14 +39,14 @@
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
-            this.DgwMenu = new System.Windows.Forms.DataGridView();
+            this.Dgw1 = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgwMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgw1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,33 +92,33 @@
             // ingresarToolStripMenuItem
             // 
             this.ingresarToolStripMenuItem.Name = "ingresarToolStripMenuItem";
-            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.ingresarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.ingresarToolStripMenuItem.Text = "Ingresar";
             this.ingresarToolStripMenuItem.Click += new System.EventHandler(this.ingresarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // eliminarToolStripMenuItem
             // 
             this.eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
-            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.eliminarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.eliminarToolStripMenuItem.Text = "Eliminar";
             // 
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buscarToolStripMenuItem.Text = "Buscar";
             // 
             // listarToolStripMenuItem
             // 
             this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.listarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.listarToolStripMenuItem.Text = "Listar";
             this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
             // 
@@ -138,21 +138,21 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Librería Virtual";
             // 
-            // DgwMenu
+            // Dgw1
             // 
-            this.DgwMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgwMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Dgw1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgw1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Código,
             this.Nombre,
             this.Autor,
             this.Edición,
             this.Editorial});
-            this.DgwMenu.Location = new System.Drawing.Point(53, 255);
-            this.DgwMenu.Name = "DgwMenu";
-            this.DgwMenu.RowHeadersWidth = 51;
-            this.DgwMenu.RowTemplate.Height = 24;
-            this.DgwMenu.Size = new System.Drawing.Size(718, 77);
-            this.DgwMenu.TabIndex = 27;
+            this.Dgw1.Location = new System.Drawing.Point(53, 255);
+            this.Dgw1.Name = "Dgw1";
+            this.Dgw1.RowHeadersWidth = 51;
+            this.Dgw1.RowTemplate.Height = 24;
+            this.Dgw1.Size = new System.Drawing.Size(718, 77);
+            this.Dgw1.TabIndex = 27;
             // 
             // Código
             // 
@@ -194,7 +194,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DgwMenu);
+            this.Controls.Add(this.Dgw1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -203,7 +203,7 @@
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgwMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgw1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,7 +222,7 @@
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView DgwMenu;
+        private System.Windows.Forms.DataGridView Dgw1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
