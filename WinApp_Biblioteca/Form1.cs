@@ -13,7 +13,7 @@ namespace WinApp_Biblioteca
 {
     public partial class Form1 : Form
     {
-        string usuario, clave, usc, clc;
+        string usuario="", clave="", usc, clc;
         public Form1(string us, string cl)
         {
             InitializeComponent();
@@ -60,14 +60,14 @@ namespace WinApp_Biblioteca
                 
                 Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
-                this.Visible = false;
+                Close();
                 
             }else if (usuario==usc && clave==clc)
             {
                 
                 Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
-                this.Visible = false;
+                Close();
             }
             else
             {
