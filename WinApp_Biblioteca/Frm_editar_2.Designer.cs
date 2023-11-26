@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLimpiarEditar = new System.Windows.Forms.Button();
             this.btnConfirmarEditar = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txteditorial = new System.Windows.Forms.TextBox();
+            this.txtedicion = new System.Windows.Forms.TextBox();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.txtnombre = new System.Windows.Forms.TextBox();
+            this.txtautor = new System.Windows.Forms.TextBox();
             this.lblAutorEditar = new System.Windows.Forms.Label();
             this.lblEditorialEditar = new System.Windows.Forms.Label();
             this.lblEdicionEditar = new System.Windows.Forms.Label();
@@ -48,7 +49,6 @@
             this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar_2)).BeginInit();
             this.SuspendLayout();
@@ -58,11 +58,11 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnLimpiarEditar);
             this.groupBox1.Controls.Add(this.btnConfirmarEditar);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txteditorial);
+            this.groupBox1.Controls.Add(this.txtedicion);
+            this.groupBox1.Controls.Add(this.txtcodigo);
+            this.groupBox1.Controls.Add(this.txtnombre);
+            this.groupBox1.Controls.Add(this.txtautor);
             this.groupBox1.Controls.Add(this.lblAutorEditar);
             this.groupBox1.Controls.Add(this.lblEditorialEditar);
             this.groupBox1.Controls.Add(this.lblEdicionEditar);
@@ -76,6 +76,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(562, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Listar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // btnLimpiarEditar
             // 
             this.btnLimpiarEditar.Location = new System.Drawing.Point(497, 350);
@@ -84,6 +93,7 @@
             this.btnLimpiarEditar.TabIndex = 38;
             this.btnLimpiarEditar.Text = "Limpiar";
             this.btnLimpiarEditar.UseVisualStyleBackColor = true;
+            this.btnLimpiarEditar.Click += new System.EventHandler(this.btnLimpiarEditar_Click);
             // 
             // btnConfirmarEditar
             // 
@@ -93,41 +103,47 @@
             this.btnConfirmarEditar.TabIndex = 37;
             this.btnConfirmarEditar.Text = "Confirmar";
             this.btnConfirmarEditar.UseVisualStyleBackColor = true;
+            this.btnConfirmarEditar.Click += new System.EventHandler(this.btnConfirmarEditar_Click);
             // 
-            // textBox5
+            // txteditorial
             // 
-            this.textBox5.Location = new System.Drawing.Point(497, 267);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 22);
-            this.textBox5.TabIndex = 36;
+            this.txteditorial.Location = new System.Drawing.Point(497, 267);
+            this.txteditorial.Name = "txteditorial";
+            this.txteditorial.Size = new System.Drawing.Size(184, 22);
+            this.txteditorial.TabIndex = 36;
+            this.txteditorial.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txteditorial_KeyPress);
             // 
-            // textBox4
+            // txtedicion
             // 
-            this.textBox4.Location = new System.Drawing.Point(497, 206);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 22);
-            this.textBox4.TabIndex = 35;
+            this.txtedicion.Location = new System.Drawing.Point(497, 206);
+            this.txtedicion.Name = "txtedicion";
+            this.txtedicion.Size = new System.Drawing.Size(184, 22);
+            this.txtedicion.TabIndex = 35;
+            this.txtedicion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtedicion_KeyPress);
             // 
-            // textBox3
+            // txtcodigo
             // 
-            this.textBox3.Location = new System.Drawing.Point(155, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 22);
-            this.textBox3.TabIndex = 34;
+            this.txtcodigo.Location = new System.Drawing.Point(155, 206);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(184, 22);
+            this.txtcodigo.TabIndex = 34;
+            this.txtcodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtcodigo_KeyPress);
             // 
-            // textBox2
+            // txtnombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(155, 267);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 22);
-            this.textBox2.TabIndex = 33;
+            this.txtnombre.Location = new System.Drawing.Point(155, 267);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(184, 22);
+            this.txtnombre.TabIndex = 33;
+            this.txtnombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtnombre_KeyPress);
             // 
-            // textBox1
+            // txtautor
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 335);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 22);
-            this.textBox1.TabIndex = 32;
+            this.txtautor.Location = new System.Drawing.Point(155, 335);
+            this.txtautor.Name = "txtautor";
+            this.txtautor.Size = new System.Drawing.Size(184, 22);
+            this.txtautor.TabIndex = 32;
+            this.txtautor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtautor_KeyPress);
             // 
             // lblAutorEditar
             // 
@@ -225,16 +241,6 @@
             this.Editorial.Name = "Editorial";
             this.Editorial.Width = 125;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(562, 397);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 39;
-            this.button1.Text = "Listar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Frm_editar_2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -261,11 +267,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button btnConfirmarEditar;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txteditorial;
+        private System.Windows.Forms.TextBox txtedicion;
+        private System.Windows.Forms.TextBox txtcodigo;
+        private System.Windows.Forms.TextBox txtnombre;
+        private System.Windows.Forms.TextBox txtautor;
         private System.Windows.Forms.Label lblAutorEditar;
         private System.Windows.Forms.Label lblEditorialEditar;
         private System.Windows.Forms.Label lblEdicionEditar;

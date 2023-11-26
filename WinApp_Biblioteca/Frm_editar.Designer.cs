@@ -131,7 +131,6 @@
             this.Controls.Add(this.grpEditar);
             this.Name = "Frm_editar";
             this.Text = "Frm_editar";
-            this.Load += new System.EventHandler(this.Frm_editar_Load);
             this.grpEditar.ResumeLayout(false);
             this.grpEditar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar)).EndInit();

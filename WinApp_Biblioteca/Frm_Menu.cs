@@ -64,7 +64,7 @@ namespace WinApp_Biblioteca
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_editar objeEditar = new Frm_editar();
+            Frm_editar objeEditar = new Frm_editar(Dgw1);
             objeEditar.Show();
         }
 
@@ -72,5 +72,7 @@ namespace WinApp_Biblioteca
         {
 
         }
+
+
     }
 }
