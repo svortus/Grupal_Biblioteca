@@ -52,6 +52,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Agregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Agregar.Designer.cs">
+      <DependentUpon>Frm_Agregar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_autores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,18 @@
     <Compile Include="Frm_listar.Designer.cs">
       <DependentUpon>Frm_listar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Registrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Registrar.Designer.cs">
+      <DependentUpon>Frm_Registrar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_ultimosLibros.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +134,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_listar.resx">
       <DependentUpon>Frm_listar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Registrar.resx">
+      <DependentUpon>Frm_Registrar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_ultimosLibros.resx">
       <DependentUpon>Frm_ultimosLibros.cs</DependentUpon>

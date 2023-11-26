@@ -20,6 +20,7 @@ namespace WinApp_Biblioteca
 
         private void Btn_listaAutores_Click(object sender, EventArgs e)
         {
+            
             Frm_autores todos_autores = new Frm_autores(Dgw1);
             todos_autores.ShowDialog();
         }

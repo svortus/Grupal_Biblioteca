@@ -13,11 +13,14 @@ namespace WinApp_Biblioteca
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        string usuario, clave, usc, clc;
+        public Form1(string us, string cl)
         {
             InitializeComponent();
+            this.usc = us;
+            this.clc = cl;
         }
-        string usuario, clave,usc,clc;
+        
 
 
         private void Txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
@@ -72,7 +75,9 @@ namespace WinApp_Biblioteca
 
         private void LkL_Rsgt_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Frm_Registrar objFR = new Frm_Registrar(usc, clc);
+            objFR.Show();
+            
         }
 
         private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)
