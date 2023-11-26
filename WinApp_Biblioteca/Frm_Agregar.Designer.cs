@@ -46,6 +46,7 @@
             this.Txt_Nom = new System.Windows.Forms.TextBox();
             this.Btn_Agregar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.Btn_Salir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -217,11 +218,23 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "Agregar un libro";
             // 
+            // Btn_Salir
+            // 
+            this.Btn_Salir.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Salir.Location = new System.Drawing.Point(319, 393);
+            this.Btn_Salir.Name = "Btn_Salir";
+            this.Btn_Salir.Size = new System.Drawing.Size(173, 34);
+            this.Btn_Salir.TabIndex = 39;
+            this.Btn_Salir.Text = "Guardar y Salir";
+            this.Btn_Salir.UseVisualStyleBackColor = true;
+            this.Btn_Salir.Click += new System.EventHandler(this.Btn_Salir_Click);
+            // 
             // Frm_Agregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Btn_Salir);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Btn_Agregar);
             this.Controls.Add(this.Txt_Nom);
@@ -264,5 +277,6 @@
         private System.Windows.Forms.TextBox Txt_Nom;
         private System.Windows.Forms.Button Btn_Agregar;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button Btn_Salir;
     }
 }

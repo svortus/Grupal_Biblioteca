@@ -39,7 +39,14 @@
             this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
+            this.Dgw1 = new System.Windows.Forms.DataGridView();
+            this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgw1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -131,11 +138,63 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Librería Virtual";
             // 
+            // Dgw1
+            // 
+            this.Dgw1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgw1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Código,
+            this.Nombre,
+            this.Autor,
+            this.Edición,
+            this.Editorial});
+            this.Dgw1.Location = new System.Drawing.Point(53, 255);
+            this.Dgw1.Name = "Dgw1";
+            this.Dgw1.RowHeadersWidth = 51;
+            this.Dgw1.RowTemplate.Height = 24;
+            this.Dgw1.Size = new System.Drawing.Size(718, 77);
+            this.Dgw1.TabIndex = 27;
+            // 
+            // Código
+            // 
+            this.Código.HeaderText = "Código";
+            this.Código.MinimumWidth = 6;
+            this.Código.Name = "Código";
+            this.Código.Width = 125;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 125;
+            // 
+            // Autor
+            // 
+            this.Autor.HeaderText = "Autor";
+            this.Autor.MinimumWidth = 6;
+            this.Autor.Name = "Autor";
+            this.Autor.Width = 125;
+            // 
+            // Edición
+            // 
+            this.Edición.HeaderText = "Edición";
+            this.Edición.MinimumWidth = 6;
+            this.Edición.Name = "Edición";
+            this.Edición.Width = 125;
+            // 
+            // Editorial
+            // 
+            this.Editorial.HeaderText = "Editorial";
+            this.Editorial.MinimumWidth = 6;
+            this.Editorial.Name = "Editorial";
+            this.Editorial.Width = 125;
+            // 
             // Frm_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Dgw1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -144,6 +203,7 @@
             this.Load += new System.EventHandler(this.Frm_Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgw1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +222,11 @@
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView Dgw1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Código;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edición;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
     }
 }
