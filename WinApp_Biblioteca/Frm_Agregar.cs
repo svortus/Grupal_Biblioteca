@@ -141,7 +141,7 @@ namespace WinApp_Biblioteca
                 //work in progress
                 foreach (DataGridViewRow row in n1.Rows)
                 {
-                    // Agregar nueva fila a Dgw5
+                    // Agregar nueva fila a Dgw1
                     Dgw1.Rows.Add();
                     Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
                     Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;

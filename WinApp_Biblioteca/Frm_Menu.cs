@@ -24,18 +24,19 @@ namespace WinApp_Biblioteca
                 {
                     // Agregar nueva fila a Dgw5
                     Dgw1.Rows.Add();
-                    int filas = Dgw1.Rows.Count - 1;
+                    /*int filas = Dgw1.Rows.Count - 1;
                     Dgw1[0, filas - 1].Value = row.Cells[0].Value;
                     Dgw1[1, filas - 1].Value = row.Cells[1].Value;
                     Dgw1[2, filas - 1].Value = row.Cells[2].Value;
                     Dgw1[3, filas - 1].Value = row.Cells[3].Value;
-                    Dgw1[4, filas - 1].Value = row.Cells[4].Value;
+                    Dgw1[4, filas - 1].Value = row.Cells[4].Value;*/
+                    
+                    Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
+                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
+                    Dgw1.Rows[row.Index].Cells["Autor"].Value = row.Cells[2].Value;
+                    Dgw1.Rows[row.Index].Cells["Edición"].Value = row.Cells[3].Value;
+                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
                     n1 = Dgw1;
-                    /*Dgw1.Rows[row.Index].Cells["Código"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Autor"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Edición"].Value = 
-                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = */
                 }
             }
 
@@ -68,3 +69,4 @@ namespace WinApp_Biblioteca
         }
     }
 }
+//puto el que lee
