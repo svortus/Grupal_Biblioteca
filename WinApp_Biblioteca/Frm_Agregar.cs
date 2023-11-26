@@ -7,8 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace WinApp_Biblioteca
 {
@@ -17,6 +15,7 @@ namespace WinApp_Biblioteca
         string codigo, nombre, autor, editorial;
         int edicion;
         DataGridView n1Menu;
+
         private void Txt_Nom_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -58,7 +57,7 @@ namespace WinApp_Biblioteca
                     edicion = int.Parse(Txt_Edi.Text);
                     if (edicion <= 0)
                     {
-                        MessageBox.Show("No exiten ediciónes negativas  ");
+                        MessageBox.Show("No existen ediciones negativas.");
                     }
                     else
                     {
@@ -68,7 +67,7 @@ namespace WinApp_Biblioteca
                 }
                 catch
                 {
-                    MessageBox.Show("Ingrese enteros ");
+                    MessageBox.Show("Ingrese enteros.");
                 }
             }
         }
@@ -102,13 +101,13 @@ namespace WinApp_Biblioteca
                 this.Dgw1[4, filas - 1].Value = editorial;
 
                 // Agregar el nuevo libro al DataGridView proporcionado
-                this.n1Menu.Rows.Add();
-                this.n1Menu.Rows[filas - 1].Cells[0].Value = codigo;
-                this.n1Menu.Rows[filas - 1].Cells[1].Value = nombre;
-                this.n1Menu.Rows[filas - 1].Cells[2].Value = autor;
-                this.n1Menu.Rows[filas - 1].Cells[3].Value = edicion;
-                this.n1Menu.Rows[filas - 1].Cells[4].Value = editorial;
-
+                this.n1Menu.Rows.Add(
+                    codigo,
+                    nombre,
+                    autor,
+                    edicion,
+                    editorial
+                );
 
                 Txt_Cod.Clear();
                 Txt_Nom.Clear();
@@ -132,40 +131,26 @@ namespace WinApp_Biblioteca
             }
         }
 
-        private void Btn_Salir_Click(object sender, EventArgs e)
-        {
-            Frm_Menu objFM = new Frm_Menu(Dgw1);
-            objFM.Show();
-            this.Close();
-        }
-
-        public Frm_Agregar(DataGridView nMenu)
+        public Frm_Agregar(DataGridView n)
         {
             InitializeComponent();
-            this.n1Menu = nMenu;
-            if (nMenu != null)
-            {
-                //work in progress
-                foreach (DataGridViewRow row in nMenu.Rows)
-                {
-                    // Agregar nueva fila a Dgw5
-                    Dgw1.Rows.Add();
-                    Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
-                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
-                    Dgw1.Rows[row.Index].Cells["Autor"].Value = row.Cells[2].Value;
-                    Dgw1.Rows[row.Index].Cells["Edición"].Value = row.Cells[3].Value;
-                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
-                }
-            }
-            
+            this.n1Menu = n;
         }
 
         private void Frm_Agregar_Load(object sender, EventArgs e)
         {
             if (n1Menu != null)
             {
-                //work in progress
-                Frm_Menu objFM = new Frm_Menu(n1Menu); objFM.Close();
+                foreach (DataGridViewRow row in n1Menu.Rows)
+                {
+                    Dgw1.Rows.Add(
+                        row.Cells["Código"].Value,
+                        row.Cells["Nombre"].Value,
+                        row.Cells["Autor"].Value,
+                        row.Cells["Edición"].Value,
+                        row.Cells["Editorial"].Value
+                    );
+                }
             }
         }
 
@@ -184,51 +169,5 @@ namespace WinApp_Biblioteca
                 }
             }
         }
-
-        //enviar informacion by jermin
-        public class Libro
-        {
-            public string Codigo { get; set; }
-            public string Nombre { get; set; }
-            public string Autor { get; set; }
-            public string Editorial { get; set; }
-            public int Edicion { get; set; }
-        }
-
-        public static class DatosCompartidos
-        {
-            public static Libro InformacionLibro { get; set; }
-        }
-
-        public class TuFormulario
-        {
-            // Método no estático
-            public void EnviarInformacion()
-            {
-                // Crear una instancia del formulario o usar la instancia existente
-                TuFormulario instanciaFormulario = new TuFormulario();
-
-                // Acceder a los TextBoxes a través de la instancia del formulario
-                DatosCompartidos.InformacionLibro = new Libro
-                {
-                    Codigo = instanciaFormulario.Txt_Cod.Text,
-                    Nombre = instanciaFormulario.Txt_Nom.Text,
-                    Autor = instanciaFormulario.Txt_Aut.Text,
-                    Editorial = instanciaFormulario.Txt_Edi.Text,
-                    Edicion = int.Parse(instanciaFormulario.Txt_Edt.Text)
-                };
-
- 
-            }
-
-            // Declaración de los TextBoxes (asegúrate de que sean públicos o internos)
-            public TextBox Txt_Cod = new TextBox();
-            public TextBox Txt_Nom = new TextBox();
-            public TextBox Txt_Aut = new TextBox();
-            public TextBox Txt_Edi = new TextBox();
-            public TextBox Txt_Edt = new TextBox();
-        }
-
-
     }
 }

@@ -47,10 +47,10 @@
             // 
             // Btn_listaUltimosInsertados
             // 
-            this.Btn_listaUltimosInsertados.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_listaUltimosInsertados.Location = new System.Drawing.Point(534, 242);
+            this.Btn_listaUltimosInsertados.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_listaUltimosInsertados.Location = new System.Drawing.Point(589, 139);
             this.Btn_listaUltimosInsertados.Name = "Btn_listaUltimosInsertados";
-            this.Btn_listaUltimosInsertados.Size = new System.Drawing.Size(139, 61);
+            this.Btn_listaUltimosInsertados.Size = new System.Drawing.Size(155, 76);
             this.Btn_listaUltimosInsertados.TabIndex = 27;
             this.Btn_listaUltimosInsertados.Text = "Ultimos Agregados";
             this.Btn_listaUltimosInsertados.UseVisualStyleBackColor = true;
@@ -58,10 +58,10 @@
             // 
             // Btn_listaAutores
             // 
-            this.Btn_listaAutores.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_listaAutores.Location = new System.Drawing.Point(356, 242);
+            this.Btn_listaAutores.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_listaAutores.Location = new System.Drawing.Point(345, 139);
             this.Btn_listaAutores.Name = "Btn_listaAutores";
-            this.Btn_listaAutores.Size = new System.Drawing.Size(139, 61);
+            this.Btn_listaAutores.Size = new System.Drawing.Size(155, 76);
             this.Btn_listaAutores.TabIndex = 25;
             this.Btn_listaAutores.Text = "Autores";
             this.Btn_listaAutores.UseVisualStyleBackColor = true;
@@ -69,10 +69,10 @@
             // 
             // Btn_listaTotalLibros
             // 
-            this.Btn_listaTotalLibros.Font = new System.Drawing.Font("Cascadia Mono", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn_listaTotalLibros.Location = new System.Drawing.Point(160, 242);
+            this.Btn_listaTotalLibros.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_listaTotalLibros.Location = new System.Drawing.Point(104, 139);
             this.Btn_listaTotalLibros.Name = "Btn_listaTotalLibros";
-            this.Btn_listaTotalLibros.Size = new System.Drawing.Size(139, 61);
+            this.Btn_listaTotalLibros.Size = new System.Drawing.Size(155, 76);
             this.Btn_listaTotalLibros.TabIndex = 24;
             this.Btn_listaTotalLibros.Text = "Todos los libros";
             this.Btn_listaTotalLibros.UseVisualStyleBackColor = true;
@@ -80,9 +80,10 @@
             // 
             // Btn_ListaPersonalizada
             // 
-            this.Btn_ListaPersonalizada.Location = new System.Drawing.Point(244, 365);
+            this.Btn_ListaPersonalizada.Font = new System.Drawing.Font("Cascadia Mono", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_ListaPersonalizada.Location = new System.Drawing.Point(345, 298);
             this.Btn_ListaPersonalizada.Name = "Btn_ListaPersonalizada";
-            this.Btn_ListaPersonalizada.Size = new System.Drawing.Size(108, 50);
+            this.Btn_ListaPersonalizada.Size = new System.Drawing.Size(155, 76);
             this.Btn_ListaPersonalizada.TabIndex = 28;
             this.Btn_ListaPersonalizada.Text = "Lista Personalizada";
             this.Btn_ListaPersonalizada.UseVisualStyleBackColor = true;
@@ -100,7 +101,6 @@
             this.Controls.Add(this.label2);
             this.Name = "Frm_listar";
             this.Text = "Listado";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 
