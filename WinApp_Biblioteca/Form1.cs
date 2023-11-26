@@ -66,7 +66,7 @@ namespace WinApp_Biblioteca
             {
                 
                 Frm_Menu objFM = new Frm_Menu(n);
-                objFM.ShowDialog();
+                objFM.ShowDialog();//c
                 Close();
             }
             else
