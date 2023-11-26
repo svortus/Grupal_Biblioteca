@@ -16,7 +16,7 @@ namespace WinApp_Biblioteca
     {
         string codigo, nombre, autor, editorial;
         int edicion;
-        DataGridView n1Menu;
+        DataGridView n1;
         private void Txt_Nom_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -93,21 +93,13 @@ namespace WinApp_Biblioteca
         {
             try
             {
-                this.Dgw1.Rows.Add();
-                int filas = this.Dgw1.Rows.Count - 1;
-                this.Dgw1[0, filas - 1].Value = codigo;
-                this.Dgw1[1, filas - 1].Value = nombre;
-                this.Dgw1[2, filas - 1].Value = autor;
-                this.Dgw1[3, filas - 1].Value = edicion;
-                this.Dgw1[4, filas - 1].Value = editorial;
-
-                // Agregar el nuevo libro al DataGridView proporcionado
-                this.n1Menu.Rows.Add();
-                this.n1Menu.Rows[filas - 1].Cells[0].Value = codigo;
-                this.n1Menu.Rows[filas - 1].Cells[1].Value = nombre;
-                this.n1Menu.Rows[filas - 1].Cells[2].Value = autor;
-                this.n1Menu.Rows[filas - 1].Cells[3].Value = edicion;
-                this.n1Menu.Rows[filas - 1].Cells[4].Value = editorial;
+                Dgw1.Rows.Add();
+                int filas = Dgw1.Rows.Count - 1;
+                Dgw1[0, filas - 1].Value = codigo;
+                Dgw1[1, filas - 1].Value = nombre;
+                Dgw1[2, filas - 1].Value = autor;
+                Dgw1[3, filas - 1].Value = edicion;
+                Dgw1[4, filas - 1].Value = editorial;
 
 
                 Txt_Cod.Clear();
@@ -134,19 +126,20 @@ namespace WinApp_Biblioteca
 
         private void Btn_Salir_Click(object sender, EventArgs e)
         {
-            Frm_Menu objFM = new Frm_Menu(Dgw1);
+            n1 = Dgw1;
+            Frm_Menu objFM = new Frm_Menu(n1);
             objFM.Show();
             this.Close();
         }
 
-        public Frm_Agregar(DataGridView nMenu)
+        public Frm_Agregar(DataGridView n)
         {
             InitializeComponent();
-            this.n1Menu = nMenu;
-            if (nMenu != null)
+            this.n1 = n;
+            if (n1 != null)
             {
                 //work in progress
-                foreach (DataGridViewRow row in nMenu.Rows)
+                foreach (DataGridViewRow row in n1.Rows)
                 {
                     // Agregar nueva fila a Dgw5
                     Dgw1.Rows.Add();
@@ -157,15 +150,15 @@ namespace WinApp_Biblioteca
                     Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
                 }
             }
-            
+
         }
 
         private void Frm_Agregar_Load(object sender, EventArgs e)
         {
-            if (n1Menu != null)
+            if (n1 != null)
             {
                 //work in progress
-                Frm_Menu objFM = new Frm_Menu(n1Menu); objFM.Close();
+                Frm_Menu objFM = new Frm_Menu(n1); objFM.Close();
             }
         }
 
@@ -218,7 +211,7 @@ namespace WinApp_Biblioteca
                     Edicion = int.Parse(instanciaFormulario.Txt_Edt.Text)
                 };
 
- 
+
             }
 
             // Declaración de los TextBoxes (asegúrate de que sean públicos o internos)
