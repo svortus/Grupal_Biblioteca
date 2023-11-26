@@ -16,7 +16,7 @@ namespace WinApp_Biblioteca
     {
         string codigo, nombre, autor, editorial;
         int edicion;
-        DataGridView n;
+        DataGridView n1;
         private void Txt_Nom_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
@@ -100,8 +100,14 @@ namespace WinApp_Biblioteca
                 Dgw1[2, filas - 1].Value = autor;
                 Dgw1[3, filas - 1].Value = edicion;
                 Dgw1[4, filas - 1].Value = editorial;
-                Frm_Menu objFM = new Frm_Menu(Dgw1);
-                objFM.Update();
+                
+
+                Txt_Cod.Clear();
+                Txt_Nom.Clear();
+                Txt_Edt.Clear();
+                Txt_Aut.Clear();
+                Txt_Edi.Clear();
+                Txt_Cod.Focus();
 
             }
             catch (Exception ex)
@@ -118,6 +124,13 @@ namespace WinApp_Biblioteca
             }
         }
 
+        private void Btn_Salir_Click(object sender, EventArgs e)
+        {
+            Frm_Menu objFM = new Frm_Menu(Dgw1);
+            objFM.Show();
+            this.Close();
+        }
+
         public Frm_Agregar(DataGridView n)
         {
             InitializeComponent();
@@ -127,6 +140,7 @@ namespace WinApp_Biblioteca
                 //work in progress
                 foreach (DataGridViewRow row in n.Rows)
                 {
+                    // Agregar nueva fila a Dgw5
                     Dgw1.Rows.Add();
                     Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
                     Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
@@ -135,12 +149,16 @@ namespace WinApp_Biblioteca
                     Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
                 }
             }
-
+            
         }
 
         private void Frm_Agregar_Load(object sender, EventArgs e)
         {
-
+            if (n1 != null)
+            {
+                //work in progress
+                Frm_Menu objFM = new Frm_Menu(n1); objFM.Close();
+            }
         }
 
         private void Txt_Cod_KeyPress(object sender, KeyPressEventArgs e)

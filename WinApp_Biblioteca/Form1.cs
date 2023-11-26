@@ -20,7 +20,7 @@ namespace WinApp_Biblioteca
             this.usc = us;
             this.clc = cl;
         }
-        
+        DataGridView n;
 
 
         private void Txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
@@ -55,13 +55,13 @@ namespace WinApp_Biblioteca
 
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
-            if(usuario =="Master" &&  clave == "1234")
+            if(usuario == "Master" &&  clave == "1234")
             {
-                Frm_Menu objFM = new Frm_Menu(null);
+                Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
             }else if (usuario==usc && clave==clc)
             {
-                Frm_Menu objFM = new Frm_Menu(null);
+                Frm_Menu objFM = new Frm_Menu(n);
                 objFM.ShowDialog();
             }
             else
