@@ -16,5 +16,10 @@ namespace WinApp_Biblioteca
         {
             InitializeComponent();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

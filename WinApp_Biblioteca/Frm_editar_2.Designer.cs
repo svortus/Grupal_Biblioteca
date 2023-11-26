@@ -29,31 +29,33 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnLimpiarEditar = new System.Windows.Forms.Button();
+            this.btnConfirmarEditar = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblAutorEditar = new System.Windows.Forms.Label();
+            this.lblEditorialEditar = new System.Windows.Forms.Label();
+            this.lblEdicionEditar = new System.Windows.Forms.Label();
+            this.lblNombreEditar = new System.Windows.Forms.Label();
+            this.lblCodigoEditar = new System.Windows.Forms.Label();
             this.Dgw_Editar_2 = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblCodigoEditar = new System.Windows.Forms.Label();
-            this.lblNombreEditar = new System.Windows.Forms.Label();
-            this.lblEdicionEditar = new System.Windows.Forms.Label();
-            this.lblEditorialEditar = new System.Windows.Forms.Label();
-            this.lblAutorEditar = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.btnConfirmarEditar = new System.Windows.Forms.Button();
-            this.btnLimpiarEditar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar_2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.btnLimpiarEditar);
             this.groupBox1.Controls.Add(this.btnConfirmarEditar);
             this.groupBox1.Controls.Add(this.textBox5);
@@ -73,6 +75,104 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // btnLimpiarEditar
+            // 
+            this.btnLimpiarEditar.Location = new System.Drawing.Point(497, 350);
+            this.btnLimpiarEditar.Name = "btnLimpiarEditar";
+            this.btnLimpiarEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpiarEditar.TabIndex = 38;
+            this.btnLimpiarEditar.Text = "Limpiar";
+            this.btnLimpiarEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnConfirmarEditar
+            // 
+            this.btnConfirmarEditar.Location = new System.Drawing.Point(635, 350);
+            this.btnConfirmarEditar.Name = "btnConfirmarEditar";
+            this.btnConfirmarEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirmarEditar.TabIndex = 37;
+            this.btnConfirmarEditar.Text = "Confirmar";
+            this.btnConfirmarEditar.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(497, 267);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(184, 22);
+            this.textBox5.TabIndex = 36;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(497, 206);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(184, 22);
+            this.textBox4.TabIndex = 35;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(155, 206);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(184, 22);
+            this.textBox3.TabIndex = 34;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(155, 267);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(184, 22);
+            this.textBox2.TabIndex = 33;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(155, 335);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(184, 22);
+            this.textBox1.TabIndex = 32;
+            // 
+            // lblAutorEditar
+            // 
+            this.lblAutorEditar.AutoSize = true;
+            this.lblAutorEditar.Location = new System.Drawing.Point(83, 338);
+            this.lblAutorEditar.Name = "lblAutorEditar";
+            this.lblAutorEditar.Size = new System.Drawing.Size(41, 16);
+            this.lblAutorEditar.TabIndex = 31;
+            this.lblAutorEditar.Text = "Autor:";
+            // 
+            // lblEditorialEditar
+            // 
+            this.lblEditorialEditar.AutoSize = true;
+            this.lblEditorialEditar.Location = new System.Drawing.Point(414, 273);
+            this.lblEditorialEditar.Name = "lblEditorialEditar";
+            this.lblEditorialEditar.Size = new System.Drawing.Size(59, 16);
+            this.lblEditorialEditar.TabIndex = 30;
+            this.lblEditorialEditar.Text = "Editorial:";
+            // 
+            // lblEdicionEditar
+            // 
+            this.lblEdicionEditar.AutoSize = true;
+            this.lblEdicionEditar.Location = new System.Drawing.Point(414, 212);
+            this.lblEdicionEditar.Name = "lblEdicionEditar";
+            this.lblEdicionEditar.Size = new System.Drawing.Size(55, 16);
+            this.lblEdicionEditar.TabIndex = 29;
+            this.lblEdicionEditar.Text = "Edición:";
+            // 
+            // lblNombreEditar
+            // 
+            this.lblNombreEditar.AutoSize = true;
+            this.lblNombreEditar.Location = new System.Drawing.Point(83, 273);
+            this.lblNombreEditar.Name = "lblNombreEditar";
+            this.lblNombreEditar.Size = new System.Drawing.Size(59, 16);
+            this.lblNombreEditar.TabIndex = 28;
+            this.lblNombreEditar.Text = "Nombre:";
+            // 
+            // lblCodigoEditar
+            // 
+            this.lblCodigoEditar.AutoSize = true;
+            this.lblCodigoEditar.Location = new System.Drawing.Point(83, 212);
+            this.lblCodigoEditar.Name = "lblCodigoEditar";
+            this.lblCodigoEditar.Size = new System.Drawing.Size(54, 16);
+            this.lblCodigoEditar.TabIndex = 27;
+            this.lblCodigoEditar.Text = "Código:";
             // 
             // Dgw_Editar_2
             // 
@@ -125,103 +225,15 @@
             this.Editorial.Name = "Editorial";
             this.Editorial.Width = 125;
             // 
-            // lblCodigoEditar
+            // button1
             // 
-            this.lblCodigoEditar.AutoSize = true;
-            this.lblCodigoEditar.Location = new System.Drawing.Point(83, 212);
-            this.lblCodigoEditar.Name = "lblCodigoEditar";
-            this.lblCodigoEditar.Size = new System.Drawing.Size(54, 16);
-            this.lblCodigoEditar.TabIndex = 27;
-            this.lblCodigoEditar.Text = "Código:";
-            // 
-            // lblNombreEditar
-            // 
-            this.lblNombreEditar.AutoSize = true;
-            this.lblNombreEditar.Location = new System.Drawing.Point(83, 273);
-            this.lblNombreEditar.Name = "lblNombreEditar";
-            this.lblNombreEditar.Size = new System.Drawing.Size(59, 16);
-            this.lblNombreEditar.TabIndex = 28;
-            this.lblNombreEditar.Text = "Nombre:";
-            // 
-            // lblEdicionEditar
-            // 
-            this.lblEdicionEditar.AutoSize = true;
-            this.lblEdicionEditar.Location = new System.Drawing.Point(414, 212);
-            this.lblEdicionEditar.Name = "lblEdicionEditar";
-            this.lblEdicionEditar.Size = new System.Drawing.Size(55, 16);
-            this.lblEdicionEditar.TabIndex = 29;
-            this.lblEdicionEditar.Text = "Edición:";
-            // 
-            // lblEditorialEditar
-            // 
-            this.lblEditorialEditar.AutoSize = true;
-            this.lblEditorialEditar.Location = new System.Drawing.Point(414, 273);
-            this.lblEditorialEditar.Name = "lblEditorialEditar";
-            this.lblEditorialEditar.Size = new System.Drawing.Size(59, 16);
-            this.lblEditorialEditar.TabIndex = 30;
-            this.lblEditorialEditar.Text = "Editorial:";
-            // 
-            // lblAutorEditar
-            // 
-            this.lblAutorEditar.AutoSize = true;
-            this.lblAutorEditar.Location = new System.Drawing.Point(83, 338);
-            this.lblAutorEditar.Name = "lblAutorEditar";
-            this.lblAutorEditar.Size = new System.Drawing.Size(41, 16);
-            this.lblAutorEditar.TabIndex = 31;
-            this.lblAutorEditar.Text = "Autor:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(155, 335);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 22);
-            this.textBox1.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(155, 267);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(184, 22);
-            this.textBox2.TabIndex = 33;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(155, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(184, 22);
-            this.textBox3.TabIndex = 34;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(497, 206);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(184, 22);
-            this.textBox4.TabIndex = 35;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(497, 267);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(184, 22);
-            this.textBox5.TabIndex = 36;
-            // 
-            // btnConfirmarEditar
-            // 
-            this.btnConfirmarEditar.Location = new System.Drawing.Point(635, 350);
-            this.btnConfirmarEditar.Name = "btnConfirmarEditar";
-            this.btnConfirmarEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnConfirmarEditar.TabIndex = 37;
-            this.btnConfirmarEditar.Text = "Confirmar";
-            this.btnConfirmarEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnLimpiarEditar
-            // 
-            this.btnLimpiarEditar.Location = new System.Drawing.Point(497, 350);
-            this.btnLimpiarEditar.Name = "btnLimpiarEditar";
-            this.btnLimpiarEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpiarEditar.TabIndex = 38;
-            this.btnLimpiarEditar.Text = "Limpiar";
-            this.btnLimpiarEditar.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(562, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 39;
+            this.button1.Text = "Listar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_editar_2
             // 
@@ -260,5 +272,6 @@
         private System.Windows.Forms.Label lblNombreEditar;
         private System.Windows.Forms.Label lblCodigoEditar;
         private System.Windows.Forms.Button btnLimpiarEditar;
+        private System.Windows.Forms.Button button1;
     }
 }

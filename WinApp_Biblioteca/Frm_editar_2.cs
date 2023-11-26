@@ -16,5 +16,11 @@ namespace WinApp_Biblioteca
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_ultimosLibros ultimos_libros = new Frm_ultimosLibros(Dgw_Editar_2);
+            ultimos_libros.ShowDialog();
+        }
     }
 }

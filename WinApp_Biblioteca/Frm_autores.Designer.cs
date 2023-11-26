@@ -49,6 +49,7 @@
             this.Dgw3.RowTemplate.Height = 24;
             this.Dgw3.Size = new System.Drawing.Size(718, 219);
             this.Dgw3.TabIndex = 25;
+            this.Dgw3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgw3_CellContentClick_1);
             // 
             // Código
             // 

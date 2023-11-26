@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinApp_Listado;
 
 namespace WinApp_Biblioteca
 {
@@ -33,6 +34,12 @@ namespace WinApp_Biblioteca
         {
             Frm_ultimosLibros ultimos_libros = new Frm_ultimosLibros(Dgw1);
             ultimos_libros.ShowDialog();
+        }
+
+        private void Btn_ListaPersonalizada_Click(object sender, EventArgs e)
+        {
+            Frm_ListaPersonalizada lista_personalizada = new Frm_ListaPersonalizada(Dgw1);
+            lista_personalizada.ShowDialog();
         }
     }
 }

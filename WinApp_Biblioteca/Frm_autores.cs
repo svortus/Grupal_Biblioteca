@@ -29,5 +29,10 @@ namespace WinApp_Biblioteca
         {
 
         }
+
+        private void Dgw3_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

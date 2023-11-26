@@ -76,6 +76,12 @@
     <Compile Include="Frm_libros.Designer.cs">
       <DependentUpon>Frm_libros.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ListaPersonalizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ListaPersonalizada.Designer.cs">
+      <DependentUpon>Frm_ListaPersonalizada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_listar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_libros.resx">
       <DependentUpon>Frm_libros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ListaPersonalizada.resx">
+      <DependentUpon>Frm_ListaPersonalizada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_listar.resx">
       <DependentUpon>Frm_listar.cs</DependentUpon>

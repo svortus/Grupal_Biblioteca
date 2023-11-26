@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.grpEditar = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.Dgw_Editar = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Autor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.grpEditar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw_Editar)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +52,25 @@
             this.grpEditar.TabIndex = 0;
             this.grpEditar.TabStop = false;
             this.grpEditar.Text = "Editar";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(345, 365);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 27;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(261, 294);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 16);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "* Por favor, selecione el libro a editar";
             // 
             // Dgw_Editar
             // 
@@ -103,24 +122,6 @@
             this.Editorial.MinimumWidth = 6;
             this.Editorial.Name = "Editorial";
             this.Editorial.Width = 125;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(261, 294);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 16);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "* Por favor, selecione el libro a editar";
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(345, 365);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
-            this.btnEditar.TabIndex = 27;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
             // 
             // Frm_editar
             // 
