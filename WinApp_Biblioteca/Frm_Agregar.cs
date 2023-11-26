@@ -93,13 +93,15 @@ namespace WinApp_Biblioteca
         {
             try
             {
-                Dgw1.Rows.Add();
-                int filas = Dgw1.Rows.Count - 1;
-                Dgw1[0, filas - 1].Value = codigo;
-                Dgw1[1, filas - 1].Value = nombre;
-                Dgw1[2, filas - 1].Value = autor;
-                Dgw1[3, filas - 1].Value = edicion;
-                Dgw1[4, filas - 1].Value = editorial;
+
+                int index = Dgw1.Rows.Add();
+
+                // Agregar los datos a la fila recién creada
+                Dgw1.Rows[index].Cells["Código"].Value = codigo;
+                Dgw1.Rows[index].Cells["Nombre"].Value = nombre;
+                Dgw1.Rows[index].Cells["Autor"].Value = autor;
+                Dgw1.Rows[index].Cells["Edición"].Value = edicion;
+                Dgw1.Rows[index].Cells["Editorial"].Value = editorial;
 
 
                 Txt_Cod.Clear();
@@ -141,7 +143,7 @@ namespace WinApp_Biblioteca
                 //work in progress
                 foreach (DataGridViewRow row in n1.Rows)
                 {
-                    // Agregar nueva fila a Dgw1
+                    // Agregar nueva fila a Dgw5
                     Dgw1.Rows.Add();
                     Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
                     Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
@@ -160,6 +162,7 @@ namespace WinApp_Biblioteca
                 //work in progress
                 Frm_Menu objFM = new Frm_Menu(n1); objFM.Close();
             }
+            Dgw1.AllowUserToAddRows = false;
         }
 
         private void Txt_Cod_KeyPress(object sender, KeyPressEventArgs e)

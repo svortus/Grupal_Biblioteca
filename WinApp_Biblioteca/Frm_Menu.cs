@@ -23,20 +23,20 @@ namespace WinApp_Biblioteca
                 foreach (DataGridViewRow row in n1.Rows)
                 {
                     // Agregar nueva fila a Dgw5
-                    Dgw1.Rows.Add();
-                    /*int filas = Dgw1.Rows.Count - 1;
-                    Dgw1[0, filas - 1].Value = row.Cells[0].Value;
-                    Dgw1[1, filas - 1].Value = row.Cells[1].Value;
-                    Dgw1[2, filas - 1].Value = row.Cells[2].Value;
-                    Dgw1[3, filas - 1].Value = row.Cells[3].Value;
-                    Dgw1[4, filas - 1].Value = row.Cells[4].Value;*/
-                    
-                    Dgw1.Rows[row.Index].Cells["Código"].Value = row.Cells[0].Value;
-                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = row.Cells[1].Value;
-                    Dgw1.Rows[row.Index].Cells["Autor"].Value = row.Cells[2].Value;
-                    Dgw1.Rows[row.Index].Cells["Edición"].Value = row.Cells[3].Value;
-                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = row.Cells[4].Value;
-                    n1 = Dgw1;
+                    int index = Dgw1.Rows.Add(); // Agregar nueva fila a Dgw1 y obtener el índice de la fila
+
+                    Dgw1.Rows[index].Cells["Código"].Value = row.Cells["Código"].Value;
+                    Dgw1.Rows[index].Cells["Nombre"].Value = row.Cells["Nombre"].Value;
+                    Dgw1.Rows[index].Cells["Autor"].Value = row.Cells["Autor"].Value;
+                    Dgw1.Rows[index].Cells["Edición"].Value = row.Cells["Edición"].Value;
+                    Dgw1.Rows[index].Cells["Editorial"].Value = row.Cells["Editorial"].Value;
+
+
+                    /*Dgw1.Rows[row.Index].Cells["Código"].Value = 
+                    Dgw1.Rows[row.Index].Cells["Nombre"].Value = 
+                    Dgw1.Rows[row.Index].Cells["Autor"].Value = 
+                    Dgw1.Rows[row.Index].Cells["Edición"].Value = 
+                    Dgw1.Rows[row.Index].Cells["Editorial"].Value = */
                 }
             }
 
@@ -44,7 +44,7 @@ namespace WinApp_Biblioteca
 
         private void Frm_Menu_Load(object sender, EventArgs e)
         {
-
+            Dgw1.AllowUserToAddRows = false;
         }
 
         private void ingresarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace WinApp_Biblioteca
 
         private void listarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Frm_listar objListados = new Frm_listar(Dgw1);
+            Frm_listar objListados = new Frm_listar();
             objListados.Show();
         }
 
@@ -67,10 +67,5 @@ namespace WinApp_Biblioteca
             Frm_editar objeEditar = new Frm_editar();
             objeEditar.Show();
         }
-
-        private void Dgw1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
-}//puto el que lee
+}
