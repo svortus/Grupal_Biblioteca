@@ -42,21 +42,21 @@ namespace WinApp_Biblioteca
             dtResultados.Columns.Add("Código");
             dtResultados.Columns.Add("Nombre");
             dtResultados.Columns.Add("Autor");
-            dtResultados.Columns.Add("Editorial");
             dtResultados.Columns.Add("Edición");
+            dtResultados.Columns.Add("Editorial");
 
             foreach (DataGridViewRow row in dgwTodoLibros.Rows)
             {
                 string nombre = Convert.ToString(row.Cells["Nombre"].Value);
                 string nombreNormalizado = Limpiatexto(nombre);
-                if (nombre.IndexOf(nombreLibro, StringComparison.OrdinalIgnoreCase) != -1)
+                if (nombreNormalizado.Contains(nombreLibro))
                 {
                     dtResultados.Rows.Add(
                         row.Cells["Código"].Value,
                         row.Cells["Nombre"].Value,
                         row.Cells["Autor"].Value,
-                        row.Cells["Editorial"].Value,
-                        row.Cells["Edición"].Value
+                        row.Cells["Edición"].Value,
+                        row.Cells["Editorial"].Value
                     );
                 }
             }

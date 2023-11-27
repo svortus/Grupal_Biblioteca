@@ -66,6 +66,7 @@ namespace WinApp_Biblioteca
         {
             Frm_editar objeEditar = new Frm_editar(Dgw1);
             objeEditar.Show();
+            Close();
         }
 
         private void Dgw1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -73,6 +74,11 @@ namespace WinApp_Biblioteca
 
         }
 
-
+        private void buscarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            n1 = Dgw1;
+            Buscar objB = new Buscar(n1);
+            objB.Show();
+        }
     }
 }

@@ -7,27 +7,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static WinApp_Biblioteca.Frm_Agregar;
 
 namespace WinApp_Biblioteca
 {
     public partial class Frm_editar : Form
     {
-        private DataGridView dgvEditar;
+       DataGridView n1;
 
-        public Frm_editar(DataGridView dgv)
+        public Frm_editar(DataGridView n)
         {
             InitializeComponent();
-            dgvEditar = dgv;
+           this.n1 = n;
 
             // Clonar la estructura del DataGridView original
-            foreach (DataGridViewColumn col in dgv.Columns)
+            foreach (DataGridViewColumn col in n1.Columns)
             {
                 Dgw_Editar.Columns.Add((DataGridViewColumn)col.Clone());
             }
 
             // Copiar los datos al DataGridView en Frm_editar
-            foreach (DataGridViewRow row in dgv.Rows)
+            foreach (DataGridViewRow row in n1.Rows)
             {
                 object[] rowData = new object[row.Cells.Count];
                 for (int i = 0; i < row.Cells.Count; i++)
@@ -50,18 +51,49 @@ namespace WinApp_Biblioteca
             // Obtener la fila seleccionada
             DataGridViewRow selectedRow = Dgw_Editar.SelectedRows[0];
 
-            // Crear un array para almacenar los datos de la fila seleccionada
-            object[] rowData = new object[selectedRow.Cells.Count];
-            for (int i = 0; i < selectedRow.Cells.Count; i++)
-            {
-                rowData[i] = selectedRow.Cells[i].Value;
-            }
+            txtcodigo.Text = selectedRow.Cells["Código"].Value.ToString();
+            txtnombre.Text = selectedRow.Cells["Nombre"].Value.ToString();
+            txtautor.Text = selectedRow.Cells["Autor"].Value.ToString();
+            txtedicion.Text = selectedRow.Cells["Edición"].Value.ToString();
+            txteditorial.Text = selectedRow.Cells["Editorial"].Value.ToString();
 
-            // Abrir el formulario Frm_Editar_2 y pasarle los datos de la fila seleccionada
-            Frm_editar_2 frmEditar_2 = new Frm_editar_2(rowData, dgvEditar);
-            //Dgw_Editar.Rows.Clear();
 
-            frmEditar_2.ShowDialog();
         }
+
+        private void Frm_editar_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConfirmarEditar_Click(object sender, EventArgs e)
+        {
+            if (Dgw_Editar.SelectedRows.Count > 0)
+            {
+                // Obtener la fila seleccionada
+                DataGridViewRow row = Dgw_Editar.SelectedRows[0];
+
+                // Actualizar los valores de las celdas con los valores de TextBox
+                row.Cells["Código"].Value = txtcodigo.Text;
+                row.Cells["Nombre"].Value = txtnombre.Text;
+                row.Cells["Autor"].Value = txtautor.Text;
+                row.Cells["Edición"].Value = txtedicion.Text;
+                row.Cells["Editorial"].Value = txteditorial.Text;
+
+
+                // Confirmar la edición
+                MessageBox.Show("Edición confirmada");
+
+                n1 = Dgw_Editar;
+                Frm_Menu objFM = new Frm_Menu(n1);
+                
+                objFM.Show();
+
+                // Limpiar los TextBox después de confirmar
+
+            }
+            this.Close();
+        }
+
+      
     }
 }

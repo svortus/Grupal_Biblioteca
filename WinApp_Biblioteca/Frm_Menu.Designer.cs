@@ -112,8 +112,9 @@
             // buscarToolStripMenuItem
             // 
             this.buscarToolStripMenuItem.Name = "buscarToolStripMenuItem";
-            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
+            this.buscarToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.buscarToolStripMenuItem.Text = "Buscar";
+            this.buscarToolStripMenuItem.Click += new System.EventHandler(this.buscarToolStripMenuItem_Click);
             // 
             // listarToolStripMenuItem
             // 
@@ -223,11 +224,11 @@
         private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView Dgw1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Código;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Autor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edición;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
+        public System.Windows.Forms.DataGridView Dgw1;
     }
 }
