@@ -80,5 +80,46 @@ namespace WinApp_Biblioteca
             Buscar objB = new Buscar(n1);
             objB.Show();
         }
+
+        private void eliminarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormEliminar formularioEliminar = new FormEliminar();
+            formularioEliminar.Owner = this; // Establece el formulario principal como propietario
+            formularioEliminar.Show();
+        }
+
+        public void EliminarFila(string nombreColumna, string valorCelda)
+        {
+            // Encuentra la columna con el nombre especificado
+            DataGridViewColumn columna = Dgw1.Columns.Cast<DataGridViewColumn>()
+                .FirstOrDefault(col => col.Name == nombreColumna);
+
+            if (columna != null)
+            {
+                // Busca la fila con el valor especificado en la columna
+                DataGridViewRow fila = Dgw1.Rows.Cast<DataGridViewRow>()
+                    .FirstOrDefault(row =>
+                        row.Cells[columna.Index].Value != null &&
+                        row.Cells[columna.Index].Value.ToString() == valorCelda);
+
+                if (fila != null)
+                {
+                    // Elimina la fila especificada
+                    Dgw1.Rows.Remove(fila);
+                }
+                else
+                {
+                    // Muestra un mensaje o realiza alguna acción en caso de que el valor no exista
+                    MessageBox.Show("El elemento a eliminar aparentemente no existe.\n" +
+                        "Asegurese de ingresar de manera correcta", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                // Muestra un mensaje o realiza alguna acción en caso de que la columna no exista
+                MessageBox.Show("La categoria no existe en el menu.\n" +
+                    "Asegurese de seleccionar las disponibles", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }
