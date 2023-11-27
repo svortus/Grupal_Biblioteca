@@ -166,10 +166,11 @@ namespace WinApp_Biblioteca
 
         public void ControlEspacios(KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '.' && e.KeyChar != '_')
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '.' && e.KeyChar != '_')
             {
                 e.Handled = true;
             }
+
         }
     }
 }
