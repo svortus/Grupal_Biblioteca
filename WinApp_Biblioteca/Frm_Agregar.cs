@@ -19,12 +19,22 @@ namespace WinApp_Biblioteca
         DataGridView n1;
         private void Txt_Nom_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ControlEspacios(e);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 try
                 {
-                    nombre = Txt_Nom.Text;
-                    Txt_Aut.Focus();
+
+                    if (Txt_Nom.Text == string.Empty)
+                    {
+                        Txt_Nom.Focus();
+                    }
+                    else
+                    {
+                        nombre = Txt_Nom.Text;
+                        Txt_Aut.Focus();
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -35,12 +45,21 @@ namespace WinApp_Biblioteca
 
         private void Txt_Aut_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ControlEspacios(e);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 try
                 {
-                    autor = Txt_Aut.Text;
-                    Txt_Edi.Focus();
+                    if (Txt_Aut.Text == string.Empty)
+                    {
+                        Txt_Aut.Focus();
+                    }
+                    else
+                    {
+                        autor = Txt_Aut.Text;
+                        Txt_Edi.Focus();
+                    }
+
                 }
                 catch (Exception ex)
                 {
@@ -51,6 +70,7 @@ namespace WinApp_Biblioteca
 
         private void Txt_Edi_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ControlEspacios(e);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 try
@@ -75,12 +95,22 @@ namespace WinApp_Biblioteca
 
         private void Txt_Edt_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ControlEspacios(e);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 try
                 {
-                    editorial = Txt_Edt.Text;
-                    Btn_Agregar.Focus();
+                    if (Txt_Edt.Text == string.Empty)
+                    {
+                        Txt_Edt.Focus();
+                    }
+                    else
+                    {
+                        editorial = Txt_Edt.Text;
+                        Btn_Agregar.Enabled = true;
+                        Btn_Agregar.Focus();
+                    }
+  
                 }
                 catch (Exception ex)
                 {
@@ -157,6 +187,7 @@ namespace WinApp_Biblioteca
 
         private void Frm_Agregar_Load(object sender, EventArgs e)
         {
+            Btn_Agregar.Enabled = false;
             if (n1 != null)
             {
                 //work in progress
@@ -167,12 +198,21 @@ namespace WinApp_Biblioteca
 
         private void Txt_Cod_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ControlEspacios(e);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 try
                 {
-                    codigo = Txt_Cod.Text;
-                    Txt_Nom.Focus();
+                    if(Txt_Cod.Text == string.Empty)
+                    {
+                        Txt_Cod.Focus();
+                    }
+                    else
+                    {
+                        codigo = Txt_Cod.Text;
+                        Txt_Nom.Focus();
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -224,7 +264,13 @@ namespace WinApp_Biblioteca
             public TextBox Txt_Edi = new TextBox();
             public TextBox Txt_Edt = new TextBox();
         }
-
+        public void ControlEspacios(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsLetter(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '.' && e.KeyChar != '_')
+            {
+                e.Handled = true;
+            }
+        }
 
     }
 }

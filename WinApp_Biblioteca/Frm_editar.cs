@@ -20,14 +20,15 @@ namespace WinApp_Biblioteca
         {
             InitializeComponent();
            this.n1 = n;
-
+            /*
             // Clonar la estructura del DataGridView original
             foreach (DataGridViewColumn col in n1.Columns)
             {
                 Dgw_Editar.Columns.Add((DataGridViewColumn)col.Clone());
             }
-
+            */
             // Copiar los datos al DataGridView en Frm_editar
+            
             foreach (DataGridViewRow row in n1.Rows)
             {
                 object[] rowData = new object[row.Cells.Count];
@@ -37,6 +38,7 @@ namespace WinApp_Biblioteca
                 }
                 Dgw_Editar.Rows.Add(rowData);
             }
+            
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -57,12 +59,12 @@ namespace WinApp_Biblioteca
             txtedicion.Text = selectedRow.Cells["Edición"].Value.ToString();
             txteditorial.Text = selectedRow.Cells["Editorial"].Value.ToString();
 
-
+            btnConfirmarEditar.Enabled = true;
         }
 
         private void Frm_editar_Load(object sender, EventArgs e)
         {
-
+            btnConfirmarEditar.Enabled = false;
         }
 
         private void btnConfirmarEditar_Click(object sender, EventArgs e)
@@ -72,28 +74,42 @@ namespace WinApp_Biblioteca
                 // Obtener la fila seleccionada
                 DataGridViewRow row = Dgw_Editar.SelectedRows[0];
 
-                // Actualizar los valores de las celdas con los valores de TextBox
-                row.Cells["Código"].Value = txtcodigo.Text;
-                row.Cells["Nombre"].Value = txtnombre.Text;
-                row.Cells["Autor"].Value = txtautor.Text;
-                row.Cells["Edición"].Value = txtedicion.Text;
-                row.Cells["Editorial"].Value = txteditorial.Text;
+                if (txtedicion.Text !="" && int.Parse(txtedicion.Text) > 0)
+                {
+                    // Actualizar los valores de las celdas con los valores de TextBox
+                    row.Cells["Código"].Value = txtcodigo.Text;
+                    row.Cells["Nombre"].Value = txtnombre.Text;
+                    row.Cells["Autor"].Value = txtautor.Text;
+                    row.Cells["Edición"].Value = txtedicion.Text;
+                    row.Cells["Editorial"].Value = txteditorial.Text;
 
+                    MessageBox.Show("Edición confirmada", "Edición", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Confirmar la edición
-                MessageBox.Show("Edición confirmada");
+                    n1 = Dgw_Editar;
+                    Frm_Menu objFM = new Frm_Menu(n1);
 
-                n1 = Dgw_Editar;
-                Frm_Menu objFM = new Frm_Menu(n1);
-                
-                objFM.Show();
-
-                // Limpiar los TextBox después de confirmar
+                    objFM.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("La edición no puede ser negativa o nula", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtedicion.Clear();
+                }
+           
 
             }
-            this.Close();
+            
         }
 
-      
+        private void grpEditar_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtedicion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

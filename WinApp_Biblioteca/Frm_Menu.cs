@@ -253,5 +253,22 @@ namespace WinApp_Biblioteca
                     "Asegurese de seleccionar las disponibles", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que quieres salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                // Cierra la aplicación completamente
+                Application.Exit();
+            }
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AcercaDe objA = new AcercaDe();
+            objA.ShowDialog();
+        }
     }
 }

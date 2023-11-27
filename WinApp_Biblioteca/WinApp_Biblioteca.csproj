@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Buscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +87,6 @@
     </Compile>
     <Compile Include="Frm_editar.Designer.cs">
       <DependentUpon>Frm_editar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Frm_editar_2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frm_editar_2.Designer.cs">
-      <DependentUpon>Frm_editar_2.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_libros.cs">
       <SubType>Form</SubType>
@@ -126,6 +126,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Buscar.resx">
       <DependentUpon>Buscar.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,9 +146,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_editar.resx">
       <DependentUpon>Frm_editar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frm_editar_2.resx">
-      <DependentUpon>Frm_editar_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_libros.resx">
       <DependentUpon>Frm_libros.cs</DependentUpon>
@@ -190,6 +190,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_22.18.54_aa5570d5-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_22.47.38_b1fb0ad0-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_22.53.17_cbbaef37-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_22.47.38_b1fb0ad0-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_23.02.09_406614aa-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2023-11-26 a las 23.02.09_406614aa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2023-11-26 a las 23.04.43_c99ad784.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_23.04.43_c99ad784-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_22.47.38_b1fb0ad0-removebg-preview2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen_de_WhatsApp_2023-11-26_a_las_23.10.46_3e1ff84a-removebg-preview.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

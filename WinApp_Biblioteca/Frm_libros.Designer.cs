@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_libros));
             this.Dgw2 = new System.Windows.Forms.DataGridView();
             this.Código = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -35,7 +36,9 @@
             this.Edición = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editorial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Dgw2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // Dgw2
@@ -47,11 +50,12 @@
             this.Autor,
             this.Edición,
             this.Editorial});
-            this.Dgw2.Location = new System.Drawing.Point(49, 159);
+            this.Dgw2.Location = new System.Drawing.Point(21, 145);
+            this.Dgw2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Dgw2.Name = "Dgw2";
             this.Dgw2.RowHeadersWidth = 51;
             this.Dgw2.RowTemplate.Height = 24;
-            this.Dgw2.Size = new System.Drawing.Size(718, 206);
+            this.Dgw2.Size = new System.Drawing.Size(685, 273);
             this.Dgw2.TabIndex = 24;
             this.Dgw2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgw2_CellContentClick);
             // 
@@ -94,22 +98,38 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cascadia Mono", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(133, 54);
+            this.label1.Location = new System.Drawing.Point(151, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(521, 40);
+            this.label1.Size = new System.Drawing.Size(406, 32);
             this.label1.TabIndex = 28;
             this.label1.Text = "Todos los Libros Disponibles";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WinApp_Biblioteca.Properties.Resources.Imagen_de_WhatsApp_2023_11_26_a_las_22_471;
+            this.pictureBox2.Location = new System.Drawing.Point(648, 458);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(87, 62);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 52;
+            this.pictureBox2.TabStop = false;
+            // 
             // Frm_libros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(217)))), ((int)(((byte)(251)))));
+            this.ClientSize = new System.Drawing.Size(734, 521);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Dgw2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_libros";
             this.Text = "Todos los libros ";
             ((System.ComponentModel.ISupportInitialize)(this.Dgw2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +144,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Edición;
         private System.Windows.Forms.DataGridViewTextBoxColumn Editorial;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

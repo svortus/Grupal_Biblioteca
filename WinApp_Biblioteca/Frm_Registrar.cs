@@ -45,22 +45,32 @@ namespace WinApp_Biblioteca
 
         private void Btn_Rsgt_Click(object sender, EventArgs e)
         {
-            clv = Txt_Clave.Text;
-            auxcl = Txt_Clave2.Text;
-            usur = Txt_Usuario.Text;
-            if (clv == auxcl)
+            
+            if(Txt_Usuario.Text !="" && Txt_Clave.Text !="" && Txt_Clave2.Text != "")
             {
-                usc = usur;
-                clc = clv;
-                MessageBox.Show("Resgisto exitoso");
-                Form1 objF1 = new Form1(usc, clv);
-                objF1.Show();
-                this.Close();
+                clv = Txt_Clave.Text;
+                auxcl = Txt_Clave2.Text;
+                usur = Txt_Usuario.Text;
+                if (clv == auxcl)
+                {
+                    usc = usur;
+                    clc = clv;
+                    MessageBox.Show("Resgisto exitoso");
+                    Form1 objF1 = new Form1(usc, clv);
+                    objF1.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("La clave no es igual");
+                }
             }
             else
             {
-                MessageBox.Show("La clave no es igual");
+                MessageBox.Show("Ingrese usuario y claves correctas","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Txt_Usuario.Focus();
             }
+            
 
         }
 
@@ -111,6 +121,11 @@ namespace WinApp_Biblioteca
             }
         }
 
+        private void Txt_Usuario_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
         public Frm_Registrar(string us, string cl)
         {
             InitializeComponent();
@@ -121,6 +136,7 @@ namespace WinApp_Biblioteca
 
         private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)
         {
+            ControlEspacios(e);
             if (e.KeyChar == (char)Keys.Enter)
             {
                 try
@@ -146,6 +162,14 @@ namespace WinApp_Biblioteca
         private void Frm_Registrar_Load(object sender, EventArgs e)
         {
 
+        }
+
+        public void ControlEspacios(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '-' && e.KeyChar != '.' && e.KeyChar != '_')
+            {
+                e.Handled = true;
+            }
         }
     }
 }
