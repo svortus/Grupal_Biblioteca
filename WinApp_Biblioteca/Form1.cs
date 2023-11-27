@@ -55,7 +55,9 @@ namespace WinApp_Biblioteca
 
         private void Btn_Ingresar_Click(object sender, EventArgs e)
         {
-            if(usuario == "Master" &&  clave == "1234")
+            clave = Txt_Clave.Text;
+            usuario = Txt_Usuario.Text;
+            if (usuario == "Master" &&  clave == "1234")
             {
                 
                 Frm_Menu objFM = new Frm_Menu(n);

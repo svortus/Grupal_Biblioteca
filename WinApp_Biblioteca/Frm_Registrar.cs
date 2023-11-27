@@ -12,7 +12,7 @@ namespace WinApp_Biblioteca
 {
     public partial class Frm_Registrar : Form
     {
-        string usur,clv,auxcl,usc, clc;
+        string usur, clv, auxcl, usc, clc;
 
         private void Txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -20,8 +20,16 @@ namespace WinApp_Biblioteca
             {
                 try
                 {
-                    clv = Txt_Clave.Text;
-                    Txt_Clave2.Focus();
+                    if (Txt_Clave.Text != "")
+                    {
+                        clv = Txt_Clave.Text;
+                        Txt_Clave2.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese la clave");
+                    }
+
                 }
                 catch
                 {
@@ -37,16 +45,19 @@ namespace WinApp_Biblioteca
 
         private void Btn_Rsgt_Click(object sender, EventArgs e)
         {
-
-            if(clv == auxcl)
+            clv = Txt_Clave.Text;
+            auxcl = Txt_Clave2.Text;
+            usur = Txt_Usuario.Text;
+            if (clv == auxcl)
             {
                 usc = usur;
                 clc = clv;
                 MessageBox.Show("Resgisto exitoso");
-                Form1 objF1 = new Form1(usc,clv);
+                Form1 objF1 = new Form1(usc, clv);
                 objF1.Show();
                 this.Close();
-            }else
+            }
+            else
             {
                 MessageBox.Show("La clave no es igual");
             }
@@ -55,11 +66,11 @@ namespace WinApp_Biblioteca
 
         private void Btn_Rsgt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if((e.KeyChar == (char)Keys.Enter))
+            if ((e.KeyChar == (char)Keys.Enter))
             {
                 Btn_Rsgt_Click(sender, e);
             }
-            
+
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -82,8 +93,16 @@ namespace WinApp_Biblioteca
             {
                 try
                 {
-                    auxcl = Txt_Clave2.Text;
-                    Btn_Rsgt.Focus();
+                    if (Txt_Clave2.Text != "")
+                    {
+                        auxcl = Txt_Clave2.Text;
+                        Btn_Rsgt.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese la clave");
+                    }
+
                 }
                 catch
                 {
@@ -92,12 +111,12 @@ namespace WinApp_Biblioteca
             }
         }
 
-        public Frm_Registrar(string us,string cl)
+        public Frm_Registrar(string us, string cl)
         {
             InitializeComponent();
             this.usc = us;
             this.clc = cl;
-            
+
         }
 
         private void Txt_Usuario_KeyPress(object sender, KeyPressEventArgs e)
@@ -106,10 +125,18 @@ namespace WinApp_Biblioteca
             {
                 try
                 {
-                    usur = Txt_Usuario.Text;
-                    Txt_Clave.Focus();
+                    if (Txt_Usuario.Text != "")
+                    {
+                        usur = Txt_Usuario.Text;
+                        Txt_Clave.Focus();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingrese el usuario");
+                    }
+
                 }
-                catch 
+                catch
                 {
                     MessageBox.Show("ERROR");
                 }
